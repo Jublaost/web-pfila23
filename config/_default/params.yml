@@ -1,0 +1,36 @@
+#################### default parameters ################################
+logo: images/logo/Pfila_2023_Logo.png
+description: Website des Regionalen Pfilas 2023 der StauU
+author: Thomas
+
+# Preloader
+preloader:
+  enable: false
+  preloader: images/logo/Pfila_2023_Logo.png # use jpg, png, svg or gif format.
+  
+############################# social site ########################
+social:
+  - name: facebook
+    icon: ti-facebook # themify icon : https://themify.me/themify-icons
+    link: "#"
+
+  - name: instagram
+    icon: ti-instagram # themify icon : https://themify.me/themify-icons
+    link: "#"
+
+############################# Plugins ##############################
+
+# CSS Plugins
+plugins:
+  css:
+    - link: "plugins/bootstrap/bootstrap.min.css"
+    - link: "plugins/themify-icons/themify-icons.css"
+    - link: "plugins/slick/slick.css"
+    - link: "plugins/slick/slick-theme.css"
+    - link: "plugins/aos/aos.css"
+  js:
+    - link: "plugins/jQuery/jquery.min.js"
+    - link: "plugins/bootstrap/bootstrap.min.js"
+    - link: "plugins/slick/slick.min.js"
+    - link: "plugins/shuffle/shuffle.min.js"
+    - link: "plugins/aos/aos.js"

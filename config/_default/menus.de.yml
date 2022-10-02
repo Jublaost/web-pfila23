@@ -1,0 +1,9 @@
+main:
+  - name: Home
+    URL: /
+    weight: 1
+
+footer:
+  - name: 
+    URL: 
+    weight: 1

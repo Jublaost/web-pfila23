@@ -1,0 +1,18 @@
+######################## default configuration ####################
+baseURL: /
+title: Pfila 23
+theme: hugo-theme-copper
+paginate: 6
+summaryLength: 10
+appinsights_instrumentationkey: "ec72e3cd-52cb-4555-ae22-dfbd95b4650a"
+defaultContentLanguage: de
+disableLanguages:
+  - en # desable language from here
+outputs:
+  home:
+    - HTML
+    - RSS
+markup:
+  goldmark:
+    renderer:
+      unsafe: true

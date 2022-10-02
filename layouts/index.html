@@ -1,65 +1,209 @@
-<!DOCTYPE html>
-<html lang="de-ch">
+{{ define "main" }}
+{{ $data := index .Site.Data .Site.Language.Lang }}
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pfila 23</title>
+<section>
     <style>
         @font-face {
             font-family: 'Century Gothic';
             src: url('/ufonts.com_century-gothic.ttf');
         }
 
-        img {
+        #header-logo {
             max-width: calc(100% - 2em);
             margin: 1em;
             max-height: 60vh;
         }
 
-        div {
+        .header {
             font-family: 'Century Gothic';
             text-align: center;
         }
 
-        p {
+        #countdown {
             color: #cc5b2b;
             font-size: 3rem;
             font-weight: 500;
         }
     </style>
-</head>
+    <section class="header">
+        <img id="header-logo" src="/images/logo/Pfila_2023_Logo.png" alt="logo">
+        <p id="countdown" style="font-family: Jubla;"></p>
+    </section>
+    <section class="registration">
+        <div class="container">
+            <hr>
+            <h2>Schar - Anmeldung</h2>
+            <br>
+            <div class="row justify-content-center">
+                <form class="col-8" id="registrationform">
+                    <div class="form-group mb-30">
+                        <label class="text-black-200 h5 font-weight-600 mb-2" for="schar">Schar<strong
+                                style="color: darkred;">*</strong></label>
+                        <input class="form-control shadow-none" type="text" placeholder="" id="schar" name="schar"
+                            required>
+                    </div>
+                    <div class=" form-group mb-30">
+                        <label class="text-black-200 h5 font-weight-600 mb-2" for="email">Kontakt-Email<strong
+                                style="color: darkred;">*</strong></label>
+                        <input class="form-control shadow-none" type="email" placeholder="chuck@norris.com" id="email"
+                            name="email" required>
+                    </div>
+                    <div class=" form-group mb-30">
+                        <label class="text-black-200 h5 font-weight-600 mb-2" for="num_tn">ungefähre Anzahl
+                            Teilnehmer<strong style="color: darkred;">*</strong></label>
+                        <input class="form-control shadow-none" type="number" placeholder="" id="num_tn" name="num_tn"
+                            required>
+                    </div>
+                    <div class=" form-group mb-30">
+                        <label class="text-black-200 h5 font-weight-600 mb-2" for="num_leader">ungefähre Anzahl
+                            Leitende<strong style="color: darkred;">*</strong></label>
+                        <input class="form-control shadow-none" type="number" placeholder="" id="num_leader"
+                            name="num_leader" required>
+                    </div>
+                    <div class="form-group mb-30">
+                        <label class="text-black-200 h5 font-weight-600 mb-2">Wir übernehmen den Musterblock</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="musterblock" value="yes"
+                                id="musterblock-yes" onchange="onMusterblockChange(false)" checked>
+                            <label class="form-check-label" for="musterblock-yes">Ja</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="musterblock" value="no"
+                                id="musterblock-no" onchange="onMusterblockChange(true)">
+                            <label class="form-check-label" for="musterblock-no">Nein</label>
+                        </div>
+                        <div id="if-no-musterblock-div" class="form-check hide">
+                            <label class="text-black-200 h6 font-weight-400" for="musterblock-info">Was macht ihr
+                                anstelle?</label>
+                            <input class="form-control shadow-none" type="text" placeholder="" id="musterblock-info"
+                                name="musterblock-info">
+                        </div>
+                    </div>
+                    <div class="form-group mb-30">
+                        <label class="text-black-200 h5 font-weight-600 mb-2">Zelter</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="tents" value="need" id="tents-need"
+                                onchange="onTentsChange(true)">
+                            <label class="form-check-label" for="tents-need">Wir benötigen zusätzliche Zelter</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="tents" value="add" id="tents-add"
+                                onchange="onTentsChange(true)">
+                            <label class="form-check-label" for="tents-add">Wir können zusätzliche Zelter
+                                mitbringen</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="tents" value="exact" id="tents-exact"
+                                onchange="onTentsChange(false)" checked>
+                            <label class="form-check-label" for="tents-exact">Wir haben genau was wir benötigen</label>
+                        </div>
+                        <div id="if-tents-div" class="form-check hide">
+                            <label class="text-black-200 h6 font-weight-400" for="tents-info">Ungefähre Anzahl
+                                Zelter</label>
+                            <input class="form-control shadow-none" type="number" placeholder="" id="tents-info"
+                                name="tents-info">
+                        </div>
+                    </div>
+                    <div class="form-group mb-30">
+                        <label class="text-black-200 h5 font-weight-600 mb-2" for="message">Kommentar / Wünsche (max 250
+                            Zeichen)</label>
+                        <textarea maxlength="250" class="form-control shadow-none" rows="4" id="message"
+                            name="message"></textarea>
+                        <p class="form-comment">Bei Fragen oder unklarheiten melde dich bei dieser Email <a
+                                href="mailto:ok@pfila23.ch">ok@pfila23.ch</a></p>
+                    </div>
+                    <br>
+                    <div class="row justify-content-end">
+                        <button class="btn btn-primary" type="submit">Anmelden</button>
+                    </div>
+                </form>
+                <div id="success-message" style="display: none">
+                    <h3>Vielen Dank!</h3>
+                    <p>Deine Schar ist angemeldet. Wir haben dir eine Bestätigungsmail geschickt.</p>
+                    <p>Solltest du keine Email erhalten haben melde dich bei <a
+                            href="mailto:ok@pfila23.ch">ok@pfila23.ch</a></p>
+                </div>
+                <div id="error-message" style="display: none">
+                    <h3>Ups!</h3>
+                    <p style="color: darkred;">Leider hat etwas nicht geklappt.. Bitte melde dich bei Thomas von Mentlen
+                        <a href="mailto:thomas.vonmentlen@jublaost.ch">thomas.vonmentlen@jublaost.ch</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<body>
-    <div>
-        <img src="/images/logo/Pfila_2023_Logo.png" alt="logo">
-        <p id="countdown"></p>
-    </div>
+    <section>
+        <div class="container">
+            <hr>
+            <h2>Angemeldete Scharen</h2>
+            <div id="registered-scharen"></div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <hr>
+            <h2>Kontaktformular</h2>
+            <div class="row justify-content-center">
+                <div class="col-8">
+                    <form class="rounded p-30" id="contactform">
+                        <div class="form-group mb-30">
+                            <label class="text-black-200 h5 font-weight-600 mb-2" for="name">Name<strong
+                                    style="color: darkred;">*</strong></label>
+                            <input class="form-control shadow-none" type="text" placeholder="Chuck Norris" id="name"
+                                name="name" required>
+                        </div>
+                        <div class="form-group mb-30">
+                            <label class="text-black-200 h5 font-weight-600 mb-2" for="email">Email<strong
+                                    style="color: darkred;">*</strong></label>
+                            <input class="form-control shadow-none" type="email" placeholder="chuck@norris.com"
+                                id="email" name="email" required>
+                        </div>
+                        <div class="form-group mb-30">
+                            <label class="text-black-200 h5 font-weight-600 mb-2" for="message">Nachricht<strong
+                                    style="color: darkred;">*</strong></label>
+                            <textarea class="form-control shadow-none" rows="5" id="message" name="message"
+                                required></textarea>
+                        </div>
+                        <br />
+                        <div class="row justify-content-end">
+                            <button class="btn btn-primary" type="submit">Senden</button>
+                        </div>
+                    </form>
+                    <div id="success-message-2" style="display: none">
+                        <h3>Vielen Dank!</h3>
+                        <p>Wir werden uns umgehend bei dir melden.</p>
+                    </div>
+                    <div id="error-message-2" style="display: none">
+                        <h3 style="color: darkred;">Fehler!</h3>
+                        <p style="color: darkred;">Leider hat etwas nicht geklappt... melde dich doch direkt bei <a
+                                href="mailto:thomas.vonmentlen@jublaost.ch">thomas.vonmentlen@jublaost.ch</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <script>
         var countDownDate = new Date("May 27, 2023 10:00:00").getTime();
-
         // Update the count down every 1 second
-        var x = setInterval(function () {
-
-            // Get today's date and time
+        var x = setInterval(() => {
             var now = new Date().getTime();
-
-            // Find the distance between now and the count down date
             var distance = countDownDate - now;
-
-            // Time calculations for days, hours, minutes and seconds
             var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-
-            // Display the result in the element with id="demo"
             document.getElementById("countdown").innerHTML = "Nur noch " + days + " Tage bis zum Pfila 2023";
-
-            // If the count down is finished, write some text
             if (distance < 0) { clearInterval(x); document.getElementById("demo").innerHTML = "EXPIRED"; }
-        }, 1000); </script>
-</body>
+        }, 1000); 
+    </script>
 
+    {{ $script := resources.Get "js/registration.js" | minify}}
+    <script src="{{ $script.Permalink }}"></script>
 
+    {{ $script := resources.Get "js/scharen.js" | minify}}
+    <script src="{{ $script.Permalink }}"></script>
 
-</html>
+    {{ $script := resources.Get "js/kontakt.js" | minify}}
+    <script src="{{ $script.Permalink }}"></script>
+
+</section>
+{{ end }}

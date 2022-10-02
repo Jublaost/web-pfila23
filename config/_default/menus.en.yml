@@ -1,0 +1,33 @@
+main:
+  - name: Home
+    URL: /
+    weight: 1
+
+  - name: Contact
+    URL: contact
+    weight: 2
+
+  - name: Pages
+    hasChildren: true
+    weight: 3
+
+  - name: Subpage
+    parent: Pages
+    URL: subpage
+
+  - name: Subpage2
+    parent: Pages
+    URL: subpage2
+
+footer:
+  - name: Faq
+    URL: faq
+    weight: 1
+
+  - name: Terms & Conditions
+    URL: terms-conditions
+    weight: 2
+
+  - name: Privacy Policy
+    URL: privacy-policy
+    weight: 3

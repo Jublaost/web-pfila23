@@ -1,0 +1,21 @@
+de:
+  languageName: De
+  languageCode: de-ch
+  contentDir: content/german
+  weight: 1
+  footer_content: 
+  title_404: Nicht gefunden
+  text_404: Wir konnten die angefragte Seite nicht finden.
+  button_404: Zurück zu Home
+  copyright: Entwickelt von Nilda
+
+en:
+  languageName: En
+  languageCode: en-en
+  contentDir: content/english
+  weight: 2
+  footer_content: Footer test text in English
+  title_404: Not Found
+  text_404: Not abel to find this site...
+  button_404: back to home
+  copyright: Developed by Nilda
