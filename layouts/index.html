@@ -35,7 +35,7 @@
             <h2>Schar - Anmeldung</h2>
             <br>
             <div class="row justify-content-center">
-                <form class="col-8" id="registrationform">
+                <form class="col-md-8" id="registrationform">
                     <div class="form-group mb-30">
                         <label class="text-black-200 h5 font-weight-600 mb-2" for="schar">Schar<strong
                                 style="color: darkred;">*</strong></label>
@@ -51,8 +51,8 @@
                     <div class=" form-group mb-30">
                         <label class="text-black-200 h5 font-weight-600 mb-2" for="email">Kontaktemail<strong
                                 style="color: darkred;">*</strong></label>
-                        <input class="form-control shadow-none" type="email" placeholder="" id="email"
-                            name="email" required>
+                        <input class="form-control shadow-none" type="email" placeholder="" id="email" name="email"
+                            required>
                     </div>
                     <div class=" form-group mb-30">
                         <label class="text-black-200 h5 font-weight-600 mb-2" for="num_tn">ungefähre Anzahl
@@ -132,7 +132,8 @@
                 <div id="error-message" style="display: none">
                     <h3>Ups!</h3>
                     <p style="color: darkred;">Leider hat etwas nicht geklappt.. Bitte melde dich bei Thomas von Mentlen
-                        <a href="mailto:thomas.vonmentlen@jublaost.ch">thomas.vonmentlen@jublaost.ch</a></p>
+                        <a href="mailto:thomas.vonmentlen@jublaost.ch">thomas.vonmentlen@jublaost.ch</a>
+                    </p>
                 </div>
             </div>
         </div>
@@ -150,41 +151,40 @@
         <div class="container">
             <hr>
             <h2>Kontaktformular</h2>
+            <br>
             <div class="row justify-content-center">
-                <div class="col-8">
-                    <form class="rounded p-30" id="contactform">
-                        <div class="form-group mb-30">
-                            <label class="text-black-200 h5 font-weight-600 mb-2" for="name">Name<strong
-                                    style="color: darkred;">*</strong></label>
-                            <input class="form-control shadow-none" type="text" placeholder="Chuck Norris" id="name"
-                                name="name" required>
-                        </div>
-                        <div class="form-group mb-30">
-                            <label class="text-black-200 h5 font-weight-600 mb-2" for="email">Email<strong
-                                    style="color: darkred;">*</strong></label>
-                            <input class="form-control shadow-none" type="email" placeholder="chuck@norris.com"
-                                id="email" name="email" required>
-                        </div>
-                        <div class="form-group mb-30">
-                            <label class="text-black-200 h5 font-weight-600 mb-2" for="message">Nachricht<strong
-                                    style="color: darkred;">*</strong></label>
-                            <textarea class="form-control shadow-none" rows="5" id="message" name="message"
-                                required></textarea>
-                        </div>
-                        <br />
-                        <div class="row justify-content-end">
-                            <button class="btn btn-primary" type="submit">Senden</button>
-                        </div>
-                    </form>
-                    <div id="success-message-2" style="display: none">
-                        <h3>Vielen Dank!</h3>
-                        <p>Wir werden uns umgehend bei dir melden.</p>
+                <form class="col-md-8" id="contactform">
+                    <div class="form-group mb-30">
+                        <label class="text-black-200 h5 font-weight-600 mb-2" for="name">Name<strong
+                                style="color: darkred;">*</strong></label>
+                        <input class="form-control shadow-none" type="text" placeholder="Chuck Norris" id="name"
+                            name="name" required>
                     </div>
-                    <div id="error-message-2" style="display: none">
-                        <h3 style="color: darkred;">Fehler!</h3>
-                        <p style="color: darkred;">Leider hat etwas nicht geklappt... melde dich doch direkt bei <a
-                                href="mailto:thomas.vonmentlen@jublaost.ch">thomas.vonmentlen@jublaost.ch</a></p>
+                    <div class="form-group mb-30">
+                        <label class="text-black-200 h5 font-weight-600 mb-2" for="email">Email<strong
+                                style="color: darkred;">*</strong></label>
+                        <input class="form-control shadow-none" type="email" placeholder="chuck@norris.com" id="email"
+                            name="email" required>
                     </div>
+                    <div class="form-group mb-30">
+                        <label class="text-black-200 h5 font-weight-600 mb-2" for="message">Nachricht<strong
+                                style="color: darkred;">*</strong></label>
+                        <textarea class="form-control shadow-none" rows="5" id="message" name="message"
+                            required></textarea>
+                    </div>
+                    <br />
+                    <div class="row justify-content-end">
+                        <button class="btn btn-primary" type="submit">Senden</button>
+                    </div>
+                </form>
+                <div id="success-message-2" style="display: none">
+                    <h3>Vielen Dank!</h3>
+                    <p>Wir werden uns umgehend bei dir melden.</p>
+                </div>
+                <div id="error-message-2" style="display: none">
+                    <h3 style="color: darkred;">Fehler!</h3>
+                    <p style="color: darkred;">Leider hat etwas nicht geklappt... melde dich doch direkt bei <a
+                            href="mailto:thomas.vonmentlen@jublaost.ch">thomas.vonmentlen@jublaost.ch</a></p>
                 </div>
             </div>
         </div>
