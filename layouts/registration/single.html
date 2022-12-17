@@ -1,0 +1,124 @@
+{{ define "main" }}
+
+<section>
+    <div class="container">
+        <br>
+        <div class="row justify-content-center">
+            <p>{{ .Description }}</p>
+        </div>
+        <div class="row justify-content-center">
+            <form class="col-10" id="{{ .Params.form }}-form">
+                <div class="form-group mb-30">
+                    <label for="vorname">Vorname: <strong style="color: darkred;">*</strong></label>
+                    <input type="text" class="form-control" id="vorname" name="vorname" required>
+                </div>
+                <div class="form-group mb-30">
+                    <label for="nachname">Nachname: <strong style="color: darkred;">*</strong></label>
+                    <input type="text" class="form-control" id="nachname" name="nachname" required>
+                </div>
+                <div class="form-group mb-30">
+                    <label for="name">Schar: <strong style="color: darkred;">*</strong></label>
+                    <select id="schar" name="schar" class="form-control" required>
+                        <option selected disabled>-- Bitte wählen --</option>
+                    </select>
+                </div>
+                <div class="form-group mb-30">
+                    <label for="name">Adresse: <strong style="color: darkred;">*</strong></label>
+                    <input id="adresse" name="adresse" class="form-control" required>
+                </div>
+                <div class="row">
+                    <div class="col-5">
+                        <div class="form-group mb-30">
+                            <label for="name">PLZ: <strong style="color: darkred;">*</strong></label>
+                            <input type="number" id="plz" name="plz" class="form-control" required>
+                        </div>
+                    </div>
+                    <div class="col-7">
+                        <div class="form-group mb-30">
+                            <label for="name">Ort: <strong style="color: darkred;">*</strong></label>
+                            <input type="text" id="ort" name="ort" class="form-control" required>
+                        </div>
+                    </div>
+                </div>
+                {{ if eq .Params.form "leitende" }}
+                <div class="form-group mb-30">
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" id="age" name="age" value="yes">
+                        <label class=" form-check-label" for="age">18+ (Ich bin volljährig)</label>
+                    </div>
+                </div>
+                {{ end }}
+                <div class="form-group mb-30" id="container-vormund">
+                    <label for="vormund">Vormundskontakt: <strong style="color: darkred;">*</strong></label>
+                    <input class="form-control" type="text" placeholder="" id="vormund" name="vormund" required>
+                </div>
+                <div class="form-group mb-30">
+                    <label for="email">Kontakt-Email: <strong style="color: darkred;">*</strong></label>
+                    <input class="form-control" type="email" placeholder="name@email.com" id="email" name="email"
+                        required>
+                </div>
+                <div class="form-group mb-30">
+                    <label for="notfallkontakt">Notfallkontakt während dem Pfila: (sofern nicht Vormundskontakt)</label>
+                    <input class="form-control" type="text" placeholder="" id="notfallkontakt" name="notfallkontakt"
+                        required>
+                </div>
+                <div class="form-group mb-30">
+                    <label for="notfallnummer">Notfall-Telefonnummer: <strong style="color: darkred;">*</strong></label>
+                    <input class="form-control" type="text" placeholder="077 123 45 67" id="notfallnummer"
+                        name="notfallnummer" required>
+                </div>
+                <div class="form-group mb-30">
+                    <label for="arzt">Hausarzt: <strong style="color: darkred;">*</strong></label>
+                    <input class="form-control" type="text" placeholder="" id="arzt" name="arzt" required>
+                </div>
+                <div class="form-group mb-30">
+                    <label for="kk">Krankenkasse: <strong style="color: darkred;">*</strong></label>
+                    <input class="form-control" type="text" placeholder="" id="kk" name="kk" required>
+                </div>
+                <div class="form-group mb-30">
+                    <label for="krankheiten">Krankheiten & allg. Allergien:</label>
+                    <textarea maxlength="250" class="form-control" rows="2" id="krankheiten"
+                        name="krankheiten"></textarea>
+                </div>
+                <div class="form-group mb-30">
+                    <label>Essgewohnheiten: </label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="vegi" name="essgewohnheiten" id="vegi">
+                        <label class="form-check-label" for="vegi">Vegetarisch</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="gluten" name="essgewohnheiten"
+                            id="gluten">
+                        <label class="form-check-label" for="gluten">Gluten Unverträglichkeit</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="laktose" name="essgewohnheiten"
+                            id="laktose">
+                        <label class="form-check-label" for="laktose">Laktose Unverträglichkeit</label>
+                    </div>
+                </div>
+                <div class="form-group mb-30">
+                    <label for="sonstiges">Sonstige Informationen: </label>
+                    <textarea maxlength="250" class="form-control" rows="3" id="sonstiges" name="sonstiges"></textarea>
+                </div>
+
+                <button class="btn btn-primary">Anmelden</button>
+            </form>
+            <div id="success-message" style="display: none">
+                <h3>Vielen Dank!</h3>
+                <p>Wir werden uns bei dir melden.</p>
+            </div>
+            <div id="error-message" style="display: none">
+                <h3>Ups!</h3>
+                <p style="color: darkred;">Leider hat etwas nicht geklappt.. Bitte melde dich bei Thomas von Mentlen<a
+                        href="mailto:thomas.vonmentlen@jublaost.ch">thomas.vonmentlen@jublaost.ch</a> oder <a
+                        href="mailto:info@pfila23.ch">info@pfila23.ch</a></p>
+            </div>
+        </div>
+    </div>
+</section>
+
+{{ $script := resources.Get "js/registration.js" | minify}}
+<script src="{{ $script.Permalink }}"></script>
+
+{{ end }}
