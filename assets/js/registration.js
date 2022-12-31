@@ -97,9 +97,9 @@ if (registrationform) {
         let api = "";
 
         if (formId == "tn-form") {
-            api = "/api/RegisterTeilnehmende"
+            api = "/api/RegisterTeilnehmende?code=3u3MZRLYlprHT1j6uKlq0mQQGlAUC6QKn86sQ5mS9KAHAzFu0ErE0Q=="
         } else if (formId == "leitende-form") {
-            api = "/api/RegisterLeitende"
+            api = "/api/RegisterLeitende?code=youtwfo6GfJO8OUz_5hIO43PnBht2tPzWikzjLGSeVDWAzFuUg2aQg=="
         } else {
             errorMessage.style.display = "block";
             return
