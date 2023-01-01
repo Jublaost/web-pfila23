@@ -95,6 +95,23 @@
                     <input class="form-control" type="text" placeholder="756.xxxx.xxxx.xx" id="ahv" name="ahv" required>
                 </div>
                 <div class="form-group mb-30">
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" id="noimpfausweis" name="noimpfausweis"
+                            value="yes">
+                        <label class="form-check-label" for="noimpfausweis">Ich habe keinen Impfausweis</label>
+                    </div>
+                </div>
+                <div id="container-impfausweis">
+                    <div class="form-group mb-30">
+                        <label class="form-label" for="impfausweis">Impfausweis: <strong
+                                style="color: darkred;">*</strong> <small>(max. 4 MB)</small></label>
+                        <input class="form-control" type="file" id="impfausweis" name="impfausweis" required>
+                        <small id="too-big-message" style="color: darkred;" class="hide">Das Dokument ist zu
+                            gross.</small>
+                    </div>
+                    <img id="impfausweis-selected" src="" alt="" style="max-width: 100%;">
+                </div>
+                <div class="form-group mb-30">
                     <label for="krankheiten">Krankheiten & allg. Allergien:</label>
                     <textarea maxlength="250" class="form-control" rows="2" id="krankheiten"
                         name="krankheiten"></textarea>

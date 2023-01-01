@@ -1,8 +1,8 @@
 let successMessage = document.getElementById("success-message");
 let errorMessage = document.getElementById("error-message");
 let registrationform = document.getElementsByTagName("form")[0];
-//const backendUrl = "http://localhost:7071";
-const backendUrl = "https://pfila23.azurewebsites.net";
+const backendUrl = "http://localhost:7071";
+//const backendUrl = "https://pfila23.azurewebsites.net";
 
 (async () => {
     getScharen();
@@ -37,6 +37,23 @@ if (checkbox) {
     });
 }
 
+let noimpf = document.getElementById("noimpfausweis");
+if (noimpf) {
+    noimpf.addEventListener("change", () => {
+        let element = document.getElementById("container-impfausweis");
+        if (noimpf.checked) {
+            element.classList.add("hide");
+            registrationform.getElementsByTagName("button")[0].disabled = false;
+            element.getElementsByTagName("input").required = false;
+        } else {
+            element.classList.remove("hide");
+            registrationform.getElementsByTagName("button")[0].disabled = true;
+            element.getElementsByTagName("input").required = true;
+        }
+    });
+}
+noimpfausweis
+
 var canvas = document.getElementById("signature-pad");
 
 function resizeCanvas() {
@@ -70,6 +87,21 @@ document.getElementById("set").addEventListener('click', () => {
     registrationform.getElementsByTagName("button")[0].disabled = false;
 })
 
+document.getElementById("impfausweis").addEventListener('change', (e) => {
+    const file = e.target.files[0];
+    if (file.size > 4000000) {
+        document.getElementById("too-big-message").classList.remove("hide");
+        document.getElementById("impfausweis").value = '';
+    } else {
+        document.getElementById("too-big-message").classList.add("hide");
+        const reader = new FileReader();
+        reader.onloadend = () => {
+            document.getElementById("impfausweis-selected").src = reader.result;
+        }
+        reader.readAsDataURL(file)
+    }
+})
+
 if (registrationform) {
     registrationform.onsubmit = (event) => {
         // prevent multibple actions
@@ -97,9 +129,11 @@ if (registrationform) {
         let api = "";
 
         if (formId == "tn-form") {
-            api = "/api/RegisterTeilnehmende?code=3u3MZRLYlprHT1j6uKlq0mQQGlAUC6QKn86sQ5mS9KAHAzFu0ErE0Q=="
+            //api = "/api/RegisterTeilnehmende?code=3u3MZRLYlprHT1j6uKlq0mQQGlAUC6QKn86sQ5mS9KAHAzFu0ErE0Q=="
+            api = "/api/RegisterTeilnehmende"
         } else if (formId == "leitende-form") {
-            api = "/api/RegisterLeitende?code=youtwfo6GfJO8OUz_5hIO43PnBht2tPzWikzjLGSeVDWAzFuUg2aQg=="
+            //api = "/api/RegisterLeitende?code=youtwfo6GfJO8OUz_5hIO43PnBht2tPzWikzjLGSeVDWAzFuUg2aQg=="
+            api = "/api/RegisterLeitende"
         } else {
             errorMessage.style.display = "block";
             return
@@ -109,6 +143,9 @@ if (registrationform) {
         registrationform.querySelectorAll(".form-control").forEach(field => {
             payload[field.name] = field.value;
         });
+
+        let impfausweis = document.getElementById("impfausweis-selected").src;
+        payload.impfausweis = impfausweis;
 
         grecaptcha.ready(() => {
             grecaptcha.execute('6LeQ0EsiAAAAAPOYVCLnkcsc6HE46vtuRfa1jgf6', { action: 'submit' }).then((token) => {
