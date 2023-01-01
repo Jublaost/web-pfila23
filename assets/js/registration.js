@@ -43,12 +43,10 @@ if (noimpf) {
         let element = document.getElementById("container-impfausweis");
         if (noimpf.checked) {
             element.classList.add("hide");
-            registrationform.getElementsByTagName("button")[0].disabled = false;
-            element.getElementsByTagName("input").required = false;
+            element.getElementsByTagName("input")[0].required = false;
         } else {
             element.classList.remove("hide");
-            registrationform.getElementsByTagName("button")[0].disabled = true;
-            element.getElementsByTagName("input").required = true;
+            element.getElementsByTagName("input")[0].required = true;
         }
     });
 }
