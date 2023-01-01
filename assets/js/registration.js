@@ -1,8 +1,8 @@
 let successMessage = document.getElementById("success-message");
 let errorMessage = document.getElementById("error-message");
 let registrationform = document.getElementsByTagName("form")[0];
-const backendUrl = "http://localhost:7071";
-//const backendUrl = "https://pfila23.azurewebsites.net";
+//const backendUrl = "http://localhost:7071";
+const backendUrl = "https://pfila23.azurewebsites.net";
 
 (async () => {
     getScharen();
@@ -129,11 +129,11 @@ if (registrationform) {
         let api = "";
 
         if (formId == "tn-form") {
-            //api = "/api/RegisterTeilnehmende?code=3u3MZRLYlprHT1j6uKlq0mQQGlAUC6QKn86sQ5mS9KAHAzFu0ErE0Q=="
-            api = "/api/RegisterTeilnehmende"
+            api = "/api/RegisterTeilnehmende?code=3u3MZRLYlprHT1j6uKlq0mQQGlAUC6QKn86sQ5mS9KAHAzFu0ErE0Q=="
+            //api = "/api/RegisterTeilnehmende"
         } else if (formId == "leitende-form") {
-            //api = "/api/RegisterLeitende?code=youtwfo6GfJO8OUz_5hIO43PnBht2tPzWikzjLGSeVDWAzFuUg2aQg=="
-            api = "/api/RegisterLeitende"
+            api = "/api/RegisterLeitende?code=youtwfo6GfJO8OUz_5hIO43PnBht2tPzWikzjLGSeVDWAzFuUg2aQg=="
+            //api = "/api/RegisterLeitende"
         } else {
             errorMessage.style.display = "block";
             return
