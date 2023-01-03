@@ -6,6 +6,7 @@
         <div class="row justify-content-center">
             <p>{{ .Description }}</p>
         </div>
+        <br>
         <div class="row justify-content-center">
             <form class="col-10" id="{{ .Params.form }}-form">
                 <div class="form-group mb-30">
@@ -17,11 +18,49 @@
                     <input type="text" class="form-control" id="nachname" name="nachname" required>
                 </div>
                 <div class="form-group mb-30">
+                    <label>Geschlecht: <strong style="color: darkred;">*</strong></label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="gender" value="M" id="gender-m">
+                        <label class="form-check-label" for="gender-m">Männlich</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="gender" value="W" id="gender-w">
+                        <label class="form-check-label" for="gender-w">Weiblich</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="gender" value="D" id="gender-d">
+                        <label class="form-check-label" for="gender-d">Divers</label>
+                    </div>
+                </div>
+                <div class="form-group mb-30">
                     <label for="name">Schar: <strong style="color: darkred;">*</strong></label>
                     <select id="schar" name="schar" class="form-control" required>
                         <option selected disabled>-- Bitte wählen --</option>
                     </select>
                 </div>
+                {{ if eq .Params.form "leitende" }}
+                <div class="form-group mb-30">
+                    <div class="form-group mb-30">
+                        <label>höchster J+S Kurs: <strong style="color: darkred;">*</strong></label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="kurs" value="keine" id="keine">
+                            <label class="form-check-label" for="keine">kein Kurs</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="kurs" value="GLK" id="GLK">
+                            <label class="form-check-label" for="GLK">GLK</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="kurs" value="SLK" id="SLK">
+                            <label class="form-check-label" for="SLK">SLK</label>
+                        </div>
+                    </div>
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" id="slrg" name="slrg" value="yes">
+                        <label class="form-check-label" for="slrg">SLRG (Ich besitze ein SLRG Prevet)</label>
+                    </div>
+                </div>
+                {{ end }}
                 <div class="form-group mb-30">
                     <label for="name">Adresse: <strong style="color: darkred;">*</strong></label>
                     <input id="adresse" name="adresse" class="form-control" required>
@@ -73,18 +112,26 @@
                         required>
                 </div>
                 <div class="form-group mb-30">
-                    <label for="notfallkontakt">Notfallkontakt während dem Pfila: (sofern nicht
-                        Vormundskontakt)</label>
+                    <label for="notfallkontakt">Notfallkontakt während dem Pfila: <small>(sofern nicht
+                            Vormundskontakt)</small></label>
                     <input class="form-control" type="text" placeholder="" id="notfallkontakt" name="notfallkontakt">
                 </div>
                 <div class="form-group mb-30">
-                    <label for="notfallnummer">Notfall-Telefonnummer: <strong style="color: darkred;">*</strong></label>
+                    <label for="notfallnummer">Notfall-Telefonnummer: <strong style="color: darkred;">*</strong>
+                        <small>(auch mehrere möglich)</small></label>
                     <input class="form-control" type="text" placeholder="077 123 45 67" id="notfallnummer"
                         name="notfallnummer" required>
                 </div>
                 <div class="form-group mb-30">
-                    <label for="arzt">Hausarzt: <strong style="color: darkred;">*</strong></label>
-                    <input class="form-control" type="text" placeholder="" id="arzt" name="arzt" required>
+                    <label for="arzt">Name, Adresse und Telefon Hausarzt: <strong
+                            style="color: darkred;">*</strong></label>
+                    <textarea maxlength="250" class="form-control" rows="3" id="hausarzt" name="hausarzt"></textarea>
+                </div>
+                <div class="form-group mb-30">
+                    <label for="unfallversicherung">Unfallversicherung: <strong
+                            style="color: darkred;">*</strong></label>
+                    <input class="form-control" type="text" placeholder="" id="unfallversicherung"
+                        name="unfallversicherung" required>
                 </div>
                 <div class="form-group mb-30">
                     <label for="kk">Krankenkasse: <strong style="color: darkred;">*</strong></label>
@@ -112,9 +159,15 @@
                     <img id="impfausweis-selected" src="" alt="" style="max-width: 100%;">
                 </div>
                 <div class="form-group mb-30">
-                    <label for="krankheiten">Krankheiten & allg. Allergien:</label>
+                    <label for="krankheiten">Krankheiten und Medikamente: <small>(Asthma, ADHS, Herzfehler,
+                            etc. und/oder müssen Medikamente genommen werden und welche?)</small></label>
                     <textarea maxlength="250" class="form-control" rows="2" id="krankheiten"
                         name="krankheiten"></textarea>
+                </div>
+                <div class="form-group mb-30">
+                    <label for="allergien">Sonstige Allergien: <small>(Pollen-, Bienengiftallergie,
+                            etc.)</small></label>
+                    <textarea maxlength="250" class="form-control" rows="2" id="allergien" name="allergien"></textarea>
                 </div>
                 <div class="form-group mb-30">
                     <label>Essgewohnheiten: </label>
@@ -134,11 +187,60 @@
                     </div>
                 </div>
                 <div class="form-group mb-30">
+                    <label for="essstoerungen">Andere Lebensmittelunverträglichkeiten: <small>(Mehl
+                            etc.)</small></label>
+                    <textarea maxlength="250" class="form-control" rows="2" id="essstoerungen"
+                        name="essstoerungen"></textarea>
+                </div>
+                <div class="form-group mb-30">
+                    <label>T-Shirt Grösse: <strong style="color: darkred;">*</strong></label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="shirt-size" value="XS" id="size-xs">
+                        <label class="form-check-label" for="size-xs">XS</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="shirt-size" value="S" id="size-s">
+                        <label class="form-check-label" for="size-s">S</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="shirt-size" value="M" id="size-m" checked>
+                        <label class="form-check-label" for="size-m">M</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="shirt-size" value="L" id="size-l">
+                        <label class="form-check-label" for="size-l">L</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="shirt-size" value="XL" id="size-xl">
+                        <label class="form-check-label" for="size-xl">XL</label>
+                    </div>
+                </div>
+                <div class="form-group mb-30">
                     <label for="sonstiges">Sonstige Informationen: </label>
                     <textarea maxlength="250" class="form-control" rows="3" id="sonstiges" name="sonstiges"></textarea>
                 </div>
+                <div class="form-group mb-30">
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" id="agb" name="agb" value="yes" required>
+                        <label class="form-check-label" for="agb">
+                            <p>Wir nehmen zur Kenntnis, dass der Lagerbeitrag CHF
+                                40.00 beträgt. Es kann sein, dass geringe zusätzliche Kosten von den Scharen für die An-
+                                und
+                                Abreise dazukommen werden.</p>
+                            <br>
+                            <p>Bei Allergien und/oder Medikamenteneinnahme bitte zusätzlich die im Lager anwesenden
+                                Gruppenleitenden informieren. Medikamenten-Einnahme ist Sache der Teilnehmenden oder
+                                ansonsten in Absprache mit der anwesenden Gruppenleitungsperson. Die
+                                Medikamentenanwendungen
+                                bitte vorgängig mit dem Kind/der Leitungsperson besprechen.</p>
+                            <br>
+                            <p>Die Versicherung ist Sache der Teilnehmenden.</p>
+                        </label>
+                    </div>
+                </div>
                 {{ if eq .Params.form "leitende" }}
-                <p id="disabledWarning"><small>Stelle sicher, dass die 18+ checkbox selektiert, oder die Unterschrift
+                <p id="disabledWarning"><small>Stelle sicher, dass die 18+ checkbox selektiert, oder die
+                        Unterschrift
                         vorhanden ist (grün umrandet)</small></p>
                 {{ else }}
                 <p id="disabledWarning"><small>Stelle sicher, dass die Unterschrift vorhanden ist (grün
