@@ -12,7 +12,6 @@ async function getScharen() {
     let response = await fetch(backendUrl + "/api/GetScharen");
     let data = await response.json();
     let container = document.getElementById("schar");
-    //container.innerHTML = "";
     for (let i of data) {
         let element = document.createElement("option");
         element.innerHTML = `${i.schar}`;
@@ -38,7 +37,7 @@ if (checkbox) {
 }
 
 let noimpf = document.getElementById("noimpfausweis");
-document.getElementById("impfausweis").value = '';
+document.getElementById("impfausweis-selected").src = '';
 if (noimpf) {
     noimpf.addEventListener("change", () => {
         document.getElementById("impfausweis").value = '';
@@ -83,7 +82,7 @@ document.getElementById("set").addEventListener('click', () => {
     document.getElementById("set").classList.add("hide");
     document.getElementById("signature").classList.remove("hide");
     var imagedata = canvas.toDataURL("image/png");
-    let img = document.getElementById("signature").src = imagedata
+    document.getElementById("signature").src = imagedata
     registrationform.getElementsByTagName("button")[0].disabled = false;
 })
 
