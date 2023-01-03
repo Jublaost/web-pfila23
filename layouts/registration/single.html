@@ -235,6 +235,27 @@
                                 bitte vorgängig mit dem Kind/der Leitungsperson besprechen.</p>
                             <br>
                             <p>Die Versicherung ist Sache der Teilnehmenden.</p>
+                            <br>
+                            <p>Mit der Anmeldung erklären man sich damit einverstanden, dass im Lager gemachte Fotos von
+                                Jungwacht und Blauring verwendet werden dürfen, insbesondere für soziale Netzwerke,
+                                Zeitungen, Lagerblog und die Homepage.</p>
+                            <br>
+
+                            {{ if eq .Params.form "leitende" }}
+                            <p>Wir nehmen die Regeln zur Kenntnis (Rauchen, Alkohol und Schnupftabak sowie
+                                jegliche andere Suchtmittel unterliegen den gesetzlichen Bestimmungen und sind nur im
+                                entsprechend vorgesehenen Bereich zu vorgeschriebenen Zeiten erlaubt. Drogen sind im
+                                Lager nicht erlaubt! (Siehe auch Schutzkonzept). Bei Verstoß gegen diese Regeln muss die
+                                Leitungsperson das Lager verlassen.</p>
+                            {{ else }}
+                            <p>Wir nehmen die Regeln zur Kenntnis (Regeln für die Teilnehmenden: IPod, Handy und
+                                weitere elektronische Unterhaltungsmittel sind im Lager unerwünscht und werden bis Ende
+                                Lager eingezogen! Rauchen, Alkohol, Schnupftabak sowie jegliche andere Suchtmittel und
+                                Drogen sind im Lager nicht erlaubt! Bei Verstoß gegen diese Regeln müssen die Kinder aus
+                                dem Lager abgeholt werden. In diesem Fall besteht kein Anspruch auf die Rückerstattung
+                                des Lagerbeitrages.)</p>
+                            {{ end }}
+
                         </label>
                     </div>
                 </div>
