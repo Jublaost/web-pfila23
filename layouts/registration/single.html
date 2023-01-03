@@ -41,7 +41,7 @@
                 {{ if eq .Params.form "leitende" }}
                 <div class="form-group mb-30">
                     <div class="form-group mb-30">
-                        <label>höchster J+S Kurs: <strong style="color: darkred;">*</strong></label>
+                        <label>höchster am Pfila gültiger J+S Kurs: <strong style="color: darkred;">*</strong></label>
                         <div class="form-check">
                             <input class="form-check-input" type="radio" name="kurs" value="keine" id="keine">
                             <label class="form-check-label" for="keine">kein Kurs</label>
@@ -57,7 +57,8 @@
                     </div>
                     <div class="form-check form-switch">
                         <input class="form-check-input" type="checkbox" id="slrg" name="slrg" value="yes">
-                        <label class="form-check-label" for="slrg">SLRG (Ich besitze ein SLRG Prevet)</label>
+                        <label class="form-check-label" for="slrg">SLRG Fluss (Ich besitze ein SLRG Fluss
+                            Prevet)</label>
                     </div>
                 </div>
                 {{ end }}
@@ -89,22 +90,24 @@
                 {{ end }}
                 <div id="container-vormund">
                     <div class="form-group mb-30">
-                        <label for="vormund">Vormundskontakt: <strong style="color: darkred;">*</strong></label>
+                        <label for="vormund">Vormundskontakt: <strong style="color: darkred;">*</strong>
+                            <small>(Vorname, Name, Tel)</small></label>
                         <input class="form-control" type="text" placeholder="" id="vormund" name="vormund" required>
                     </div>
-                    <div class="signature">
-                        <label for="signature-pad">Unterschrift Vormund: <strong style="color: darkred;">*</strong>
-                            <small>(Bitte mit OK bestätigen)</small></label>
-                        <canvas id="signature-pad" width="200" height="200" style="border: 2px gray solid;"></canvas>
-                    </div>
-                    <br>
-                    <div class="signature-buttons" style="text-align: center;">
-                        <div id="clear" class="btn btn-primary">Neu</div>
-                        <div id="set" class="btn btn-primary">OK</div>
-                    </div>
-                    <br>
-                    <img class="hide" id="signature" src="" alt="" style="width: 100%; border: 2px green solid;">
                 </div>
+
+                <div class="signature">
+                    <label for="signature-pad">Unterschrift: <strong style="color: darkred;">*</strong>
+                        <small>(Bitte mit OK bestätigen)</small></label>
+                    <canvas id="signature-pad" width="200" height="200" style="border: 2px gray solid;"></canvas>
+                </div>
+                <br>
+                <div class="signature-buttons" style="text-align: center;">
+                    <div id="clear" class="btn btn-primary">Neu</div>
+                    <div id="set" class="btn btn-primary">OK</div>
+                </div>
+                <br>
+                <img class="hide" id="signature" src="" alt="" style="width: 100%; border: 2px green solid;">
 
                 <div class="form-group mb-30">
                     <label for="email">Kontakt-Email: <strong style="color: darkred;">*</strong></label>
@@ -223,11 +226,13 @@
                     <div class="form-check form-switch">
                         <input class="form-check-input" type="checkbox" id="agb" name="agb" value="yes" required>
                         <label class="form-check-label" for="agb">
+                            {{ if ne .Params.form "leitende" }}
                             <p>Wir nehmen zur Kenntnis, dass der Lagerbeitrag CHF
                                 40.00 beträgt. Es kann sein, dass geringe zusätzliche Kosten von den Scharen für die An-
                                 und
                                 Abreise dazukommen werden.</p>
                             <br>
+                            {{ end }}
                             <p>Bei Allergien und/oder Medikamenteneinnahme bitte zusätzlich die im Lager anwesenden
                                 Gruppenleitenden informieren. Medikamenten-Einnahme ist Sache der Teilnehmenden oder
                                 ansonsten in Absprache mit der anwesenden Gruppenleitungsperson. Die
