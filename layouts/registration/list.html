@@ -1,0 +1,20 @@
+{{ define "main" }}
+
+<section>
+    <div class="container text-center">
+        <br>
+        <h2>{{ .Description }}</h2>
+        <br>
+        {{ range where .Site.RegularPages "Section" "registration" }}
+        <a href="{{ .Permalink | relURL }}">
+            <button class="btn btn-primary">{{ .Title }}</button>
+        </a>
+        <br>
+        <br>
+        {{ end }}
+        <br>
+        <br>
+    </div>
+</section>
+
+{{ end }}

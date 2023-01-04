@@ -26,116 +26,19 @@
         }
     </style>
     <section class="header">
-        <img id="header-logo" src="/images/logo/Pfila_2023_Logo.png" alt="logo">
+        <img id="header-logo" src="/images/logo/Pfila_2023_Logo.png" alt="logo" style="max-width: 30%;">
         <p id="countdown" style="font-family: Jubla;"></p>
     </section>
-    <section class="registration">
-        <div class="container">
-            <hr>
-            <h2>Schar - Anmeldung</h2>
-            <br>
-            <div class="row justify-content-center">
-                <form class="col-md-8" id="registrationform">
-                    <div class="form-group mb-30">
-                        <label class="text-black-200 h5 font-weight-600 mb-2" for="schar">Schar<strong
-                                style="color: darkred;">*</strong></label>
-                        <input class="form-control shadow-none" type="text" placeholder="" id="schar" name="schar"
-                            required>
-                    </div>
-                    <div class="form-group mb-30">
-                        <label class="text-black-200 h5 font-weight-600 mb-2" for="kontakt">Hauptkontakt<strong
-                                style="color: darkred;">*</strong></label>
-                        <input class="form-control shadow-none" type="text" placeholder="" id="kontakt" name="kontakt"
-                            required>
-                    </div>
-                    <div class=" form-group mb-30">
-                        <label class="text-black-200 h5 font-weight-600 mb-2" for="email">Kontaktemail<strong
-                                style="color: darkred;">*</strong></label>
-                        <input class="form-control shadow-none" type="email" placeholder="" id="email" name="email"
-                            required>
-                    </div>
-                    <div class=" form-group mb-30">
-                        <label class="text-black-200 h5 font-weight-600 mb-2" for="num_tn">ungefähre Anzahl
-                            Teilnehmende<strong style="color: darkred;">*</strong></label>
-                        <input class="form-control shadow-none" type="number" placeholder="" id="num_tn" name="num_tn"
-                            required>
-                    </div>
-                    <div class=" form-group mb-30">
-                        <label class="text-black-200 h5 font-weight-600 mb-2" for="num_leader">ungefähre Anzahl
-                            Leitende<strong style="color: darkred;">*</strong></label>
-                        <input class="form-control shadow-none" type="number" placeholder="" id="num_leader"
-                            name="num_leader" required>
-                    </div>
-                    <div class="form-group mb-30">
-                        <label class="text-black-200 h5 font-weight-600 mb-2">Wir übernehmen den Musterblock</label>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="musterblock" value="yes"
-                                id="musterblock-yes" onchange="onMusterblockChange(false)" checked>
-                            <label class="form-check-label" for="musterblock-yes">Ja</label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="musterblock" value="no"
-                                id="musterblock-no" onchange="onMusterblockChange(true)">
-                            <label class="form-check-label" for="musterblock-no">Nein</label>
-                        </div>
-                        <div id="if-no-musterblock-div" class="form-check hide">
-                            <label class="text-black-200 h6 font-weight-400" for="musterblock-info">Was macht ihr
-                                anstelle?</label>
-                            <input class="form-control shadow-none" type="text" placeholder="" id="musterblock-info"
-                                name="musterblock-info">
-                        </div>
-                    </div>
-                    <div class="form-group mb-30">
-                        <label class="text-black-200 h5 font-weight-600 mb-2">Zelter</label>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="tents" value="need" id="tents-need"
-                                onchange="onTentsChange(true)">
-                            <label class="form-check-label" for="tents-need">Wir benötigen zusätzliche Zelter</label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="tents" value="add" id="tents-add"
-                                onchange="onTentsChange(true)">
-                            <label class="form-check-label" for="tents-add">Wir können zusätzliche Zelter
-                                mitbringen</label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="tents" value="exact" id="tents-exact"
-                                onchange="onTentsChange(false)" checked>
-                            <label class="form-check-label" for="tents-exact">Wir haben genau was wir benötigen</label>
-                        </div>
-                        <div id="if-tents-div" class="form-check hide">
-                            <label class="text-black-200 h6 font-weight-400" for="tents-info">Ungefähre Anzahl
-                                Zelter</label>
-                            <input class="form-control shadow-none" type="number" placeholder="" id="tents-info"
-                                name="tents-info">
-                        </div>
-                    </div>
-                    <div class="form-group mb-30">
-                        <label class="text-black-200 h5 font-weight-600 mb-2" for="message">Kommentar / Wünsche (max 250
-                            Zeichen)</label>
-                        <textarea maxlength="250" class="form-control shadow-none" rows="4" id="message"
-                            name="message"></textarea>
-                        <p class="form-comment">Bei Fragen oder unklarheiten melde dich bei dieser Email <a
-                                href="mailto:ok@pfila23.ch">ok@pfila23.ch</a></p>
-                    </div>
-                    <br>
-                    <div class="float-right">
-                        <button class="btn btn-primary" type="submit">Anmelden</button>
-                    </div>
-                </form>
-                <div id="success-message" style="display: none">
-                    <h3>Vielen Dank!</h3>
-                    <p>Deine Schar ist angemeldet. Wir haben dir eine Bestätigungsmail geschickt.</p>
-                    <p>Solltest du keine Email erhalten haben melde dich bei <a
-                            href="mailto:ok@pfila23.ch">ok@pfila23.ch</a></p>
-                </div>
-                <div id="error-message" style="display: none">
-                    <h3>Ups!</h3>
-                    <p style="color: darkred;">Leider hat etwas nicht geklappt.. Bitte melde dich bei Thomas von Mentlen
-                        <a href="mailto:thomas.vonmentlen@jublaost.ch">thomas.vonmentlen@jublaost.ch</a>
-                    </p>
-                </div>
-            </div>
+
+    <section>
+        <div class="container justify-content-center">
+            <video width="100%" height="400" autoplay muted loop style="transform:rotate(-90deg);">
+                <source src="/movies/GIF_Video1.mp4">
+            </video>
+            <p style="text-align: center;">
+                <br>
+                <a href="/registration"><button class="btn btn-primary">JETZT ANMELDEN</button></a>
+            </p>
         </div>
     </section>
 
@@ -201,9 +104,6 @@
             if (distance < 0) { clearInterval(x); document.getElementById("demo").innerHTML = "EXPIRED"; }
         }, 1000); 
     </script>
-
-    {{ $script := resources.Get "js/registration.js" | minify}}
-    <script src="{{ $script.Permalink }}"></script>
 
     {{ $script := resources.Get "js/scharen.js" | minify}}
     <script src="{{ $script.Permalink }}"></script>

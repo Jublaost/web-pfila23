@@ -2,6 +2,9 @@ main:
   - name: Home
     URL: /
     weight: 1
+  - name: Anmeldung
+    URL: registration
+    weight: 2
 
 footer:
   - name: 

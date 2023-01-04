@@ -1,7 +1,7 @@
-<!--<header class="header-nav position-relative bg-light-gray sticky">
+<header class="header-nav position-relative bg-light-gray sticky">
   <div class="container">
     <nav class="navbar navbar-expand-xl navbar-light px-0">
-      <a id="header-img" class="navbar-brand p-0 header-logo-big" href="{{ site.BaseURL }}">
+      <a id="header-img" class="navbar-brand p-0 header-logo-big" href="{{ site.BaseURL }}" style="max-width: 8rem;">
         {{ with site.Params.logo }}
 
         {{ $image := resources.GetMatch . }}
@@ -69,19 +69,7 @@
             {{ end }}
           </li>
         </ul>
-
-
-        <div class="navbar-button">
-          <button href="#!" class="btn btn-sm btn-outline-primary" data-toggle="modal" data-target="#signup-modal">Sign
-            Up</button>
-          <button href="#!" class="btn btn-sm btn-link pr-xl-0" data-toggle="modal" data-target="#signin-modal">Log
-            in<svg width="1.5em" height="1.5em" viewBox="0 0 16 16" class="bi bi-arrow-right-short" fill="currentColor"
-              xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd"
-                d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
-            </svg></button>
-        </div>
       </div>
     </nav>
   </div>
-</header>-->
+</header>
