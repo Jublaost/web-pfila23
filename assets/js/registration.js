@@ -52,6 +52,27 @@ if (noimpf) {
     });
 }
 
+let kkkmanuell = document.getElementById("kkk-manuell");
+document.getElementById("kkk1-selected").src = '';
+document.getElementById("kkk2-selected").src = '';
+if (kkkmanuell) {
+    kkkmanuell.addEventListener("change", () => {
+        let manuell = document.getElementById("container-kkk-manuell");
+        let upload = document.getElementById("container-kkk");
+        if (kkkmanuell.checked) {
+            manuell.classList.remove("hide");
+            manuell.getElementsByTagName("input")[0].required = true;
+            upload.classList.add("hide");
+            upload.getElementsByTagName("input")[0].required = false;
+        } else {
+            manuell.classList.add("hide");
+            manuell.getElementsByTagName("input")[0].required = false;
+            upload.classList.remove("hide");
+            upload.getElementsByTagName("input")[0].required = true;
+        }
+    });
+}
+
 var canvas = document.getElementById("signature-pad");
 
 function resizeCanvas() {
@@ -96,6 +117,36 @@ document.getElementById("impfausweis").addEventListener('change', (e) => {
         const reader = new FileReader();
         reader.onloadend = () => {
             document.getElementById("impfausweis-selected").src = reader.result;
+        }
+        reader.readAsDataURL(file)
+    }
+})
+
+document.getElementById("kkk1").addEventListener('change', (e) => {
+    const file = e.target.files[0];
+    if (file.size > 4000000) {
+        document.getElementById("too-big-message-kkk1").classList.remove("hide");
+        document.getElementById("kkk1").value = '';
+    } else {
+        document.getElementById("too-big-message-kkk1").classList.add("hide");
+        const reader = new FileReader();
+        reader.onloadend = () => {
+            document.getElementById("kkk1-selected").src = reader.result;
+        }
+        reader.readAsDataURL(file)
+    }
+})
+
+document.getElementById("kkk2").addEventListener('change', (e) => {
+    const file = e.target.files[0];
+    if (file.size > 4000000) {
+        document.getElementById("too-big-message-kkk2").classList.remove("hide");
+        document.getElementById("kkk2").value = '';
+    } else {
+        document.getElementById("too-big-message-kkk2").classList.add("hide");
+        const reader = new FileReader();
+        reader.onloadend = () => {
+            document.getElementById("kkk2-selected").src = reader.result;
         }
         reader.readAsDataURL(file)
     }
