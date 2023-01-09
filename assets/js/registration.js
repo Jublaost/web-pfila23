@@ -64,11 +64,14 @@ if (kkkmanuell) {
             manuell.getElementsByTagName("input")[0].required = true;
             upload.classList.add("hide");
             upload.getElementsByTagName("input")[0].required = false;
+            upload.getElementsByTagName("input")[1].required = false;
         } else {
             manuell.classList.add("hide");
             manuell.getElementsByTagName("input")[0].required = false;
             upload.classList.remove("hide");
             upload.getElementsByTagName("input")[0].required = true;
+            upload.getElementsByTagName("input")[1].required = true;
+
         }
     });
 }
