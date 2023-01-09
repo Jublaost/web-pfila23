@@ -134,12 +134,14 @@
                             style="color: darkred;">*</strong></label>
                     <textarea maxlength="250" class="form-control" rows="3" id="hausarzt" name="hausarzt"></textarea>
                 </div>
+                {{ if eq .Params.form "leitende" }}
                 <div class="form-group mb-30">
                     <label for="unfallversicherung">Unfallversicherung: <strong
                             style="color: darkred;">*</strong></label>
                     <input class="form-control" type="text" placeholder="" id="unfallversicherung"
                         name="unfallversicherung" required>
                 </div>
+                {{ end }}
                 <div class="form-group mb-30">
                     <label for="kk">Krankenkasse: <strong style="color: darkred;">*</strong></label>
                     <input class="form-control" type="text" placeholder="" id="kk" name="kk" required>
