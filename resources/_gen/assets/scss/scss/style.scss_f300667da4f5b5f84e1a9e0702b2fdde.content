@@ -3010,3 +3010,13 @@ canvas#signature-pad {
   width: 100%;
   height: 100%;
   cursor: crosshair; }
+
+.faq h3 {
+  text-align: left;
+  margin-left: -2%;
+  color: #54ac5c;
+  font-size: 1.4em;
+  font-weight: 600; }
+
+.brand-carousel .brand-item {
+  height: 5em; }

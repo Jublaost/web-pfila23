@@ -9,9 +9,9 @@
         }
 
         #header-logo {
-            max-width: calc(100% - 2em);
+            max-width: calc(90% - 2em);
             margin: 1em;
-            max-height: 60vh;
+            max-height: 40vh;
         }
 
         .header {
@@ -21,7 +21,7 @@
 
         #countdown {
             color: #cc5b2b;
-            font-size: 3rem;
+            font-size: 2.5rem;
             font-weight: 500;
         }
     </style>
@@ -31,30 +31,61 @@
     </section>
 
     <section>
-        <div class="container justify-content-center">
+        <div class="container justify-content-center" style="text-align: center;">
+            <p>Nach gut 10 Jahren findet für alle Kinder und Jugendlichen aus den beiden Jubla-Regionen StauU (St.
+                Gallen und Umgebung) und SaWe (Sargans/Werdenberg) wieder ein dreitätiges, regionales Pfingstlager
+                statt.
+            </p>
+            <p>
+                Mit deinen Leitenden sowie vielen weiteren Lebensfreund*innen aus anderen Scharen zelten wir vom
+                Samstag, 27. Mai 2023 bis Montag, 29. Mai 2023 im Sittertobel (St. Gallen) und feiern gemeinsam das
+                Lebensbaumfest von <strong>Tom dä Bom</strong>.
+            </p>
             <video width="100%" height="400" autoplay muted loop style="transform:rotate(-90deg);">
                 <source src="/movies/GIF_Video1.mp4">
             </video>
-            <p style="text-align: center;">
-                <br>
+            <p>Bist du dabei? Wir freuen uns auf deine online Anmeldung:</p>
+            <p class="p-30">
                 <a href="/registration"><button class="btn btn-primary">JETZT ANMELDEN</button></a>
             </p>
         </div>
     </section>
 
+    {{ if $data.homepage.sponsor_logo_slider.enable }}
+    {{ with $data.homepage.sponsor_logo_slider }}
+    <section class="section-padding overflow-hidden">
+        <div class="container">
+            <hr>
+            <h2 class="p-30">Wir danken unseren Sponsoren</h2>
+            <div class="row">
+                <div class="col-md-12" data-aos="fade-left">
+                    <div class="brand-carousel">
+                        {{ range .logos }}
+                        <a href="{{ .url }}" target="_blank">
+                            <div class="brand-item d-flex align-items-center justify-content-center">
+                                <img class="img-fluid" src="{{ .image | absURL }}" alt="">
+                            </div>
+                        </a>
+                        {{ end }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    {{ end }}
+    {{ end }}
+
     <section>
         <div class="container">
             <hr>
-            <h2>Angemeldete Scharen</h2>
+            <h2 class="p-30">Angemeldete Scharen</h2>
             <div id="registered-scharen"></div>
         </div>
     </section>
 
     <section>
         <div class="container">
-            <hr>
-            <h2>Kontaktformular</h2>
-            <br>
+            <h2 class="p-30">Kontaktformular</h2>
             <div class="row justify-content-center">
                 <form class="col-md-8" id="contactform">
                     <div class="form-group mb-30">

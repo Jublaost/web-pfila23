@@ -5,6 +5,12 @@ main:
   - name: Anmeldung
     URL: registration
     weight: 2
+  - name: Häufige Fragen
+    URL: faq
+    weight: 3
+  - name: Spenden
+    URL: spenden
+    weight: 4
 
 footer:
   - name: 

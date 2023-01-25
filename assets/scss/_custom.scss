@@ -12,3 +12,15 @@ canvas#signature-pad {
     height: 100%;
     cursor: crosshair;
 }
+
+.faq h3 {
+    text-align: left;
+    margin-left: -2%;
+    color: $color-primary;
+    font-size: 1.4em;
+    font-weight: 600;
+}
+
+.brand-carousel .brand-item {
+    height: 5em;
+}
