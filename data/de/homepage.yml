@@ -1,0 +1,8 @@
+########################## Sponsor Logo Slider #########################
+sponsor_logo_slider:
+  enable : true
+  logos:
+  - url: https://www.herisau.ch/
+    image: sponsors/logo_Gmd_Herisau.png
+  - url: https://metrohm-stiftung.ch/
+    image: sponsors/Metrohm_Metrohm_Stiftung_neg_bw.png
