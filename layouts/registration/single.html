@@ -150,7 +150,7 @@
                             style="color: darkred;">*</strong></label>
                     <textarea maxlength="250" class="form-control" rows="3" id="hausarzt" name="hausarzt"></textarea>
                 </div>
-                {{ if eq .Params.form "leitende" }}
+                {{ if ne .Params.form "tn" }}
                 <div class="form-group mb-30">
                     <label for="unfallversicherung">Unfallversicherung: <strong
                             style="color: darkred;">*</strong></label>
