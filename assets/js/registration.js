@@ -133,6 +133,9 @@ if (registrationform) {
         } else if (formId == "leitende-form") {
             api = "/api/RegisterLeitende?code=youtwfo6GfJO8OUz_5hIO43PnBht2tPzWikzjLGSeVDWAzFuUg2aQg=="
             //api = "/api/RegisterLeitende"
+        } else if (formId == "helfende-form") {
+            api = "/api/RegisterHelfende?code=SmBbXRnyes_eQd1PuiAHHAOX3lmSPBUEFEI-qnyh5EniAzFutuWzEQ=="
+            //api = "/api/RegisterHelfende"
         } else {
             errorMessage.style.display = "block";
             return
