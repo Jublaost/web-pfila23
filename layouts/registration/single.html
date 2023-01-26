@@ -1,4 +1,5 @@
 {{ define "main" }}
+{{ $data := index .Site.Data .Site.Language.Lang }}
 
 <section>
     <div class="container">
@@ -245,6 +246,30 @@
                         <label class="form-check-label" for="size-xl">XL</label>
                     </div>
                 </div>
+                {{ if eq .Params.form "helfende" }}
+                <div class="row">
+                    {{ range $index1, $dates :=$data.homepage.helfende }}
+                    <div class="form-group col-md-4 mb-30">
+                        <label class="text-black-200 h5 font-weight-600 mb-2">{{ $dates.name }}</label>
+                        {{ range $index, $element := .dates }}
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox"
+                                value="{{ $element.date }} {{ $element.time }}" name="pfila-dates"
+                                id="pfila-dates-{{ $index1 }}-{{$index}}">
+                            <label class="form-check-label" for="pfila-dates-{{ $index1 }}-{{$index}}">
+                                {{ dateFormat "Monday 2. Jan" $element.date }} {{ $element.time }}</label>
+                            <small>({{ .job }})</small>
+                        </div>
+                        {{ end }}
+                    </div>
+                    {{ end }}
+                </div>
+                <div class="form-group mb-30">
+                    <label for="helpcount">Wie viele Stunden möchte ich helfen: <strong
+                            style="color: darkred;">*</strong></label>
+                    <input type="text" id="helpcount" name="helpcount" class="form-control" required>
+                </div>
+                {{ end }}
                 <div class="form-group mb-30">
                     <label for="sonstiges">Sonstige Informationen: </label>
                     <textarea maxlength="250" class="form-control" rows="3" id="sonstiges" name="sonstiges"></textarea>
@@ -274,13 +299,13 @@
                             <br>
 
                             {{ if ne .Params.form "tn" }}
-                            <p>Medikamenten-Einnahme ist Sache der Leitungsperson.</p>
+                            <p>Medikamenten-Einnahme ist Sache der Leitungsperson / Helfende</p>
                             <br>
                             <p>Wir nehmen die Regeln zur Kenntnis (Rauchen, Alkohol und Schnupftabak sowie
                                 jegliche andere Suchtmittel unterliegen den gesetzlichen Bestimmungen und sind nur im
                                 entsprechend vorgesehenen Bereich zu vorgeschriebenen Zeiten erlaubt. Drogen sind im
                                 Lager nicht erlaubt. (Siehe auch Schutzkonzept). Bei Verstoß gegen diese Regeln muss die
-                                Leitungsperson das Lager verlassen.</p>
+                                Leitungsperson / Helfende das Lager verlassen.</p>
                             {{ else }}
                             <p>Wir nehmen die Regeln zur Kenntnis (Regeln für die Teilnehmenden: IPod, Handy und
                                 weitere elektronische Unterhaltungsmittel sind im Lager unerwünscht und werden bis Ende

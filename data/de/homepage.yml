@@ -6,3 +6,88 @@ sponsor_logo_slider:
     image: sponsors/logo_Gmd_Herisau.png
   - url: https://metrohm-stiftung.ch/
     image: sponsors/Metrohm_Metrohm_Stiftung_neg_bw.png
+
+########################## Helfende Schichten #########################
+helfende:
+- name: Aufbau
+  dates:
+  - date: 2023-05-12
+    time: 18.00 - 21.00
+    job: Sarasani Blachen knüpfen in Herisau
+  - date: 2023-05-13
+    time: 08.00 - 13.00
+    job: Unteranderem Aufbau Sarasani
+  - date: 2023-05-13
+    time: 13.00 - 17.00
+    job: Unteranderem Aufbau Sarasani
+  - date: 2023-05-14
+    time: 08.00 - 13.00
+    job: Unteranderem Aufbau Sarasani
+  - date: 2023-05-14
+    time: 13.00 - 17.00
+    job: Unteranderem Aufbau Sarasani
+  - date: 2023-05-19
+    time: 08.00 - 13.00
+    job: Strom / Bühne
+  - date: 2023-05-19
+    time: 13.00 - 17.00
+    job: Strom / Bühne
+  - date: 2023-05-24
+    time: ab 17.00
+    job: Aufbau Zelte
+  - date: 2023-05-25
+    time: ab 17.00
+    job: Aufbau Zelte
+  - date: 2023-05-26
+    time: ab 17.00
+    job: Aufbau Zelte
+- name: Am Pfila
+  dates: 
+  - date: 2023-05-27
+    time: 10.00 - 13.00
+    job: Allrounder*in
+  - date: 2023-05-27
+    time: 13.00 - 17.00
+    job: Allrounder*in
+  - date: 2023-05-27
+    time: 17.30 - 20.30
+    job: Essen schöpfen
+  - date: 2023-05-28
+    time: 07.30 - 10.30
+    job: Essen schöpfen
+  - date: 2023-05-28
+    time: 09.00 - 13.00
+    job: Allrounder*in  
+  - date: 2023-05-28
+    time: 11.30 - 14.30
+    job: Essen schöpfen
+  - date: 2023-05-28
+    time: 13.00 - 17.00
+    job: Allrounder*in
+  - date: 2023-05-28
+    time: 17.30 - 20.30
+    job: Essen schöpfen
+  - date: 2023-05-29
+    time: 09.00 - 13.00
+    job: Allrounder*in  
+  - date: 2023-05-29
+    time: 07.30 - 10.30
+    job: Essen schöpfen
+  - date: 2023-05-29
+    time: 11.30 - 14.30
+    job: Essen schöpfen
+  - date: 2023-05-29
+    time: 13.00 - 17.00
+    job: Allrounder*in
+- name: Abbau
+  dates: 
+  - date: 2023-05-29
+    time: ab Mittag
+    job: Abbau
+  - date: 2023-05-30
+    time: 08.00 - 13.00
+    job: Abbau
+  - date: 2023-05-30
+    time: 13.00 - 17.00
+    job: Abbau
+
