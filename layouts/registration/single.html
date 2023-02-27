@@ -6,6 +6,7 @@
         <div class="row justify-content-center">
             <p>{{ .Description }}</p>
         </div>
+        {{ if .Params.active }}
         <br>
         <div class="row justify-content-center">
             <form class="col-10" id="{{ .Params.form }}-form">
@@ -299,8 +300,11 @@
                         href="mailto:ok@pfila23.ch">ok@pfila23.ch</a></p>
             </div>
         </div>
+        {{ end }}
     </div>
 </section>
+
+{{ if .Params.active }}
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/signature_pad/1.3.5/signature_pad.min.js"
     integrity="sha512-kw/nRM/BMR2XGArXnOoxKOO5VBHLdITAW00aG8qK4zBzcLVZ4nzg7/oYCaoiwc8U9zrnsO9UHqpyljJ8+iqYiQ=="
@@ -309,6 +313,6 @@
 {{ $script := resources.Get "js/registration.js" | minify}}
 <script src="{{ $script.Permalink }}"></script>
 
-
+{{ end }}
 
 {{ end }}

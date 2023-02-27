@@ -1,5 +1,5 @@
 ---
 title: Anmeldung
-description: Melde dich jetzt an fürs Pfila23!!
+description: Die Anmeldung fürs Pila ist vorbei.
 
 ---

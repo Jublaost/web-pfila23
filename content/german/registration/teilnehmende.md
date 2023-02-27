@@ -1,6 +1,6 @@
 ---
 title: Anmeldung Teilnehmende
-description: Melde dich jetzt an fürs Pfila23!!
+description: Die anmeldung ist vorbei.
 form: tn
-
+active: false
 ---
