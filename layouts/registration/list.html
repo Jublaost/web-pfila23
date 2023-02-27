@@ -5,14 +5,14 @@
         <br>
         <h2>{{ .Description }}</h2>
         <br>
-        <!--
         {{ range where .Site.RegularPages "Section" "registration" }}
+        {{ if .Params.active }}
         <a href="{{ .Permalink | relURL }}">
             <button class="btn btn-primary">{{ .Title }}</button>
         </a>
+        {{ end }}
+        {{ end }}
         <br>
-        <br>
-        {{ end }}-->
         <br>
         <br>
     </div>
