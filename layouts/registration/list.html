@@ -7,9 +7,11 @@
         <br>
         {{ range where .Site.RegularPages "Section" "registration" }}
         {{ if .Params.active }}
+        {{ if not .Params.hidden }}
         <a href="{{ .Permalink | relURL }}">
             <button class="btn btn-primary">{{ .Title }}</button>
         </a>
+        {{ end }}
         {{ end }}
         {{ end }}
         <br>
