@@ -145,6 +145,7 @@
                     <input class="form-control" type="text" placeholder="077 123 45 67" id="notfallnummer"
                         name="notfallnummer" required>
                 </div>
+                {{ if ne .Params.form "helfende" }}
                 <div class="form-group mb-30">
                     <label for="arzt">Name, Adresse und Telefon Hausarzt: <strong
                             style="color: darkred;">*</strong></label>
@@ -200,6 +201,7 @@
                             etc.)</small></label>
                     <textarea maxlength="250" class="form-control" rows="2" id="allergien" name="allergien"></textarea>
                 </div>
+                {{ end }}
                 <div class="form-group mb-30">
                     <label>Essgewohnheiten: </label>
                     <div class="form-check">
@@ -261,9 +263,11 @@
                             <small>({{ .job }})</small>
                         </div>
                         {{ end }}
+
                     </div>
                     {{ end }}
                 </div>
+                <p class="p-20"><small>* J&S Bus Fahrer müssen eine eigene Fremdlenkerversicherung haben!</small></p>
                 <div class="form-group mb-30">
                     <label for="helpcount">So oft möchte ich helfen: <strong style="color: darkred;">*</strong></label>
                     <input type="text" id="helpcount" name="helpcount" class="form-control" required>

@@ -37,7 +37,9 @@ if (checkbox) {
 }
 
 let noimpf = document.getElementById("noimpfausweis");
-document.getElementById("impfausweis-selected").src = '';
+if (document.getElementById("impfausweis-selected")) {
+    document.getElementById("impfausweis-selected").src = '';
+}
 if (noimpf) {
     noimpf.addEventListener("change", () => {
         document.getElementById("impfausweis").value = '';
@@ -67,7 +69,9 @@ var signaturePad = new SignaturePad(canvas, {
     backgroundColor: 'rgb(250,250,250)'
 });
 
-document.getElementById("signature").src = '';
+if (document.getElementById("signature")) {
+    document.getElementById("signature").src = '';
+}
 document.getElementById("clear").addEventListener('click', function () {
     canvas.classList.remove("hide");
     document.getElementById("set").classList.remove("hide");
