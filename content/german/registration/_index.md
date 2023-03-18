@@ -1,5 +1,5 @@
 ---
 title: Anmeldung
-description: Die Anmeldung fürs Pila ist vorbei.
+description: Die Anmeldung fürs Pfila ist vorbei.
 
 ---

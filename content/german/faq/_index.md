@@ -1,5 +1,5 @@
 ---
-title: FAG
+title: FAQ
 description: Häufig gestellte Fragen
 ---
 
