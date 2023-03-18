@@ -2,7 +2,61 @@
 sponsor_logo_slider:
   enable : true
   logos:
-  - url: https://www.herisau.ch/
-    image: sponsors/logo_Gmd_Herisau.png
-  - url: https://metrohm-stiftung.ch/
+  - name: Methrom Stiftung
+    url: https://metrohm-stiftung.ch/
     image: sponsors/Metrohm_Metrohm_Stiftung_neg_bw.png
+  - name: Stiftung Fred Styger
+    url: 
+    image: 
+  - name: Stiftung Steinegg Herisau
+    url: 
+    image: 
+  - name: Kath. Kirchgemeinde Gäbris (Seelsorgeeinheit)
+    url: https://www.seelsorgeeinheitgaebris.ch/
+    image: sponsors/seelsorgeeinheit-gaebris.png
+  - name: Stiftung Albin Pedrotti St. Gallen
+    url: 
+    image: 
+  - name: sgsw St. Galler Stadtwerke
+    url: https://www.sgsw.ch/
+    image: sponsors/sgsw.jpeg
+  - name: Gemeinde Herisau
+    url: https://www.herisau.ch/
+    image: sponsors/logo_Gmd_Herisau.png
+  - name: Kath. Kirchgemeinde Muolen
+    url: https://www.altkon.ch/muolen
+    image: sponsors/muolen.png
+  - name: Stadt St. Gallen
+    url: https://www.stadt.sg.ch/home.html
+    image: sponsors/sg.png
+  - name: Ortsbürgergemeinde St. Gallen
+    url: https://www.ortsbuerger.ch/startseite.html
+    image: sponsors/ortsbrg_sg.png
+  - name: Brauerei Locher
+    url: https://www.appenzellerbier.ch/de/home.html
+    image: sponsors/logo_appenzeller-bier.png
+  - name: Kath. Kirchgemeinde Buchs Grabs
+    url: https://www.kathwerdenberg.ch/buchs-grabs
+    image: 
+  - name: Kath. Kirchgemeinde St. Gallen (Pfarrei Bruggen)
+    url: https://bruggen.kathsg.ch/DE/1/home.htm
+    image: 
+  - name: Raiffeisenbank Sarganserland
+    url: https://www.raiffeisen.ch/sarganserland/de.html
+    image: sponsors/raiffaisen.png
+  - name: Raiffeisenbank Appenzeller Hinterland
+    url: https://www.raiffeisen.ch/appenzeller-hinterland/de.html
+    image: sponsors/raiffaisen.png
+  - name: Kath. Kirchgemeinde Region Rorschach
+    url: https://www.kkrr.ch/index.html
+    image: sponsors/kath_ror.png
+  - name: Märchenhotel Braunwald
+    url: https://www.maerchenhotel.ch/
+    image: sponsors/maerchenhotel.png
+  - name: Privatspende Martin & Barbara Grob
+    url: 
+    image: 
+  - name: Privatspende Johannes Martin Grob
+    url: 
+    image: 
+
