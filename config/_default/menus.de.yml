@@ -8,9 +8,17 @@ main:
   - name: Anmeldung
     URL: registration
     weight: 3
-  - name: Häufige Fragen
-    URL: faq
+  - name: Infos
+    hasChildren: true
     weight: 4
+  - name: Häufige Fragen
+    parent: Infos
+    URL: faq
+    weight: 1
+  - name: Jugendurlaub
+    parent: Infos
+    URL: jugendurlaub
+    weight: 2
   - name: Spenden
     URL: spenden
     weight: 5
