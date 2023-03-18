@@ -1,4 +1,5 @@
 {{ define "main" }}
+{{ $data := index .Site.Data .Site.Language.Lang }}
 
 <section>
     <div class="container">
@@ -37,13 +38,20 @@
                     <label for="geburtstag">Geburtstag: <strong style="color: darkred;">*</strong></label>
                     <input type="date" class="form-control" id="geburtstag" name="geburtstag" required>
                 </div>
+                {{ if eq .Params.form "helfende" }}
                 <div class="form-group mb-30">
-                    <label for="name">Schar: <strong style="color: darkred;">*</strong></label>
+                    <label for="schar">Schar: <strong style="color: darkred;">*</strong></label>
+                    <input type="text" class="form-control" id="schar" name="schar" required>
+                </div>
+                {{ else }}
+                <div class="form-group mb-30">
+                    <label for="schar">Schar: <strong style="color: darkred;">*</strong></label>
                     <select id="schar" name="schar" class="form-control" required>
                         <option selected disabled>-- Bitte wählen --</option>
                     </select>
                 </div>
-                {{ if eq .Params.form "leitende" }}
+                {{ end }}
+                {{ if ne .Params.form "tn" }}
                 <div class="form-group mb-30">
                     <div class="form-group mb-30">
                         <label>höchster am Pfila gültiger J+S Kurs: <strong style="color: darkred;">*</strong></label>
@@ -67,6 +75,14 @@
                     </div>
                 </div>
                 {{ end }}
+                {{ if eq .Params.form "helfende" }}
+                <div class="form-group mb-30">
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" id="auto" name="auto" value="yes">
+                        <label class=" form-check-label" for="auto">Führerschein Kategorie B vorhanden</label>
+                    </div>
+                </div>
+                {{ end }}
                 <div class="form-group mb-30">
                     <label for="name">Adresse: <strong style="color: darkred;">*</strong></label>
                     <input id="adresse" name="adresse" class="form-control" required>
@@ -85,7 +101,7 @@
                         </div>
                     </div>
                 </div>
-                {{ if eq .Params.form "leitende" }}
+                {{ if ne .Params.form "tn" }}
                 <div class="form-group mb-30">
                     <div class="form-check form-switch">
                         <input class="form-check-input" type="checkbox" id="age" name="age" value="yes">
@@ -130,12 +146,13 @@
                     <input class="form-control" type="text" placeholder="077 123 45 67" id="notfallnummer"
                         name="notfallnummer" required>
                 </div>
+                {{ if ne .Params.form "helfende" }}
                 <div class="form-group mb-30">
                     <label for="arzt">Name, Adresse und Telefon Hausarzt: <strong
                             style="color: darkred;">*</strong></label>
                     <textarea maxlength="250" class="form-control" rows="3" id="hausarzt" name="hausarzt"></textarea>
                 </div>
-                {{ if eq .Params.form "leitende" }}
+                {{ if ne .Params.form "tn" }}
                 <div class="form-group mb-30">
                     <label for="unfallversicherung">Unfallversicherung: <strong
                             style="color: darkred;">*</strong></label>
@@ -185,6 +202,7 @@
                             etc.)</small></label>
                     <textarea maxlength="250" class="form-control" rows="2" id="allergien" name="allergien"></textarea>
                 </div>
+                {{ end }}
                 <div class="form-group mb-30">
                     <label>Essgewohnheiten: </label>
                     <div class="form-check">
@@ -231,6 +249,31 @@
                         <label class="form-check-label" for="size-xl">XL</label>
                     </div>
                 </div>
+                {{ if eq .Params.form "helfende" }}
+                <div class="row">
+                    {{ range $index1, $dates :=$data.homepage.helfende }}
+                    <div class="form-group col-md-4 mb-30">
+                        <label class="text-black-200 h5 font-weight-600 mb-2">{{ $dates.name }}</label>
+                        {{ range $index, $element := .dates }}
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox"
+                                value="{{ $element.date }} {{ $element.time }}" name="pfila-dates"
+                                id="pfila-dates-{{ $index1 }}-{{$index}}">
+                            <label class="form-check-label" for="pfila-dates-{{ $index1 }}-{{$index}}">
+                                {{ dateFormat "Monday 2. Jan" $element.date }} {{ $element.time }}</label>
+                            <small>({{ .job }})</small>
+                        </div>
+                        {{ end }}
+
+                    </div>
+                    {{ end }}
+                </div>
+                <p class="p-20"><small>* J&S Bus Fahrer müssen eine eigene Fremdlenkerversicherung haben!</small></p>
+                <div class="form-group mb-30">
+                    <label for="helpcount">So oft möchte ich helfen: <strong style="color: darkred;">*</strong></label>
+                    <input type="text" id="helpcount" name="helpcount" class="form-control" required>
+                </div>
+                {{ end }}
                 <div class="form-group mb-30">
                     <label for="sonstiges">Sonstige Informationen: </label>
                     <textarea maxlength="250" class="form-control" rows="3" id="sonstiges" name="sonstiges"></textarea>
@@ -239,7 +282,7 @@
                     <div class="form-check form-switch">
                         <input class="form-check-input" type="checkbox" id="agb" name="agb" value="yes" required>
                         <label class="form-check-label" for="agb">
-                            {{ if ne .Params.form "leitende" }}
+                            {{ if eq .Params.form "tn" }}
                             <p>Wir nehmen zur Kenntnis, dass der Lagerbeitrag CHF
                                 40.00 beträgt. Es kann sein, dass geringe zusätzliche Kosten von den Scharen für die An-
                                 und
@@ -259,14 +302,14 @@
                                 Zeitungen, Lagerblog und die Homepage.</p>
                             <br>
 
-                            {{ if eq .Params.form "leitende" }}
-                            <p>Medikamenten-Einnahme ist Sache der Leitungsperson.</p>
+                            {{ if ne .Params.form "tn" }}
+                            <p>Medikamenten-Einnahme ist Sache der Leitungsperson / Helfende</p>
                             <br>
                             <p>Wir nehmen die Regeln zur Kenntnis (Rauchen, Alkohol und Schnupftabak sowie
                                 jegliche andere Suchtmittel unterliegen den gesetzlichen Bestimmungen und sind nur im
                                 entsprechend vorgesehenen Bereich zu vorgeschriebenen Zeiten erlaubt. Drogen sind im
                                 Lager nicht erlaubt. (Siehe auch Schutzkonzept). Bei Verstoß gegen diese Regeln muss die
-                                Leitungsperson das Lager verlassen.</p>
+                                Leitungsperson / Helfende das Lager verlassen.</p>
                             {{ else }}
                             <p>Wir nehmen die Regeln zur Kenntnis (Regeln für die Teilnehmenden: IPod, Handy und
                                 weitere elektronische Unterhaltungsmittel sind im Lager unerwünscht und werden bis Ende
@@ -279,14 +322,8 @@
                         </label>
                     </div>
                 </div>
-                {{ if eq .Params.form "leitende" }}
-                <p id="disabledWarning"><small>Stelle sicher, dass die 18+ checkbox selektiert, oder die
-                        Unterschrift
-                        vorhanden ist (grün umrandet)</small></p>
-                {{ else }}
                 <p id="disabledWarning"><small>Stelle sicher, dass die Unterschrift vorhanden ist (grün
                         umrandet)</small></p>
-                {{ end }}
                 <button class="btn btn-primary" disabled>Anmelden</button>
             </form>
             <div id="success-message" style="display: none">

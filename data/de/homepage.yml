@@ -60,3 +60,158 @@ sponsor_logo_slider:
     url: 
     image: 
 
+########################## Helfende Schichten #########################
+helfende:
+- name: Aufbau
+  dates:
+  - date: 2023-05-12
+    time: 18.00 - 21.00
+    job: Sarasani Blachen knüpfen in Herisau
+  - date: 2023-05-13
+    time: 08.00 - 16.30
+    job: Aufbau Sarasani
+  - date: 2023-05-14
+    time: 08.00 - 16.30
+    job: Aufbau Sarasani
+  - date: 2023-05-19
+    time: 08.00 - 16.30
+    job: Aufbau Festzelte
+  - date: 2023-05-20
+    time: 09.00 - 12.00
+    job: Aufbau
+  - date: 2023-05-20
+    time: 13.00 - 17.00
+    job: Aufbau
+  - date: 2023-05-21
+    time: 09.00 - 12.00
+    job: Aufbau
+  - date: 2023-05-21
+    time: 13.00 - 17.00
+    job: Aufbau
+  - date: 2023-05-22
+    time: 09.00 - 12.00
+    job: Aufbau
+  - date: 2023-05-22
+    time: 13.00 - 17.00
+    job: Aufbau
+  - date: 2023-05-23
+    time: 09.00 - 12.00
+    job: Aufbau
+  - date: 2023-05-23
+    time: 13.00 - 17.00
+    job: Aufbau
+  - date: 2023-05-24
+    time: 09.00 - 12.00
+    job: Aufbau und Zelteinweisung
+  - date: 2023-05-24
+    time: 13.00 - 17.00
+    job: Aufbau und Zelteinweisung
+  - date: 2023-05-24
+    time: ab 17.00
+    job: Aufbau und Zelteinweisung
+  - date: 2023-05-25
+    time: 09.00 - 12.00
+    job: Aufbau und Zelteinweisung
+  - date: 2023-05-25
+    time: 13.00 - 17.00
+    job: Aufbau und Zelteinweisung
+  - date: 2023-05-25
+    time: ab 17.00
+    job: Aufbau und Zelteinweisung
+  - date: 2023-05-26
+    time: 09.00 - 12.00
+    job: Aufbau und Zelteinweisung
+  - date: 2023-05-26
+    time: 13.00 - 17.00
+    job: Aufbau und Zelteinweisung
+  - date: 2023-05-26
+    time: ab 17.00
+    job: Aufbau und Zelteinweisung
+  - date: 2023-05-26
+    time: 09.00 - 12.00
+    job: Dekoteam
+  - date: 2023-05-26
+    time: 13.00 - 17.00
+    job: Dekoteam
+  - date: 2023-05-23
+    time: 09.00 - 17.00
+    job: Fahrer J&S Bus Materialtransport*
+  - date: 2023-05-24
+    time: 09.00 - 17.00
+    job: Fahrer J&S Bus Materialtransport*
+  - date: 2023-05-25
+    time: 09.00 - 17.00
+    job: Fahrer J&S Bus Materialtransport*
+  - date: 2023-05-26
+    time: 09.00 - 17.00
+    job: Fahrer J&S Bus Materialtransport*
+
+- name: Am Pfila
+  dates: 
+  - date: 2023-05-27
+    time: 11.30 - 13.00
+    job: Spielmobil
+  - date: 2023-05-27
+    time: 14.30 - 15.30
+    job: Spielmobil
+  - date: 2023-05-27
+    time: 18.00 - 19.00
+    job: Spielmobil
+  - date: 2023-05-27
+    time: 17.30 - 20.30
+    job: Essen schöpfen
+  - date: 2023-05-28
+    time: 14.00 - 14.30
+    job: Spielmobil
+  - date: 2023-05-28
+    time: 15.30 - 16.00
+    job: Spielmobil
+  - date: 2023-05-28
+    time: 18.00 - 19.00
+    job: Spielmobil
+  - date: 2023-05-28
+    time: 07.30 - 10.30
+    job: Essen schöpfen 
+  - date: 2023-05-28
+    time: 11.30 - 14.30
+    job: Essen schöpfen
+  - date: 2023-05-28
+    time: 17.30 - 20.30
+    job: Essen schöpfen
+  - date: 2023-05-29
+    time: 07.30 - 10.30
+    job: Essen schöpfen
+  - date: 2023-05-29
+    time: 11.30 - 14.30
+    job: Essen schöpfen
+  - date: 2023-05-27
+    time: 20.00 - 23.00
+    job: Bar
+  - date: 2023-05-27
+    time: 23.00 - 02.00
+    job: Bar
+  - date: 2023-05-28
+    time: 20.00 - 23.00
+    job: Bar
+  - date: 2023-05-28
+    time: 23.00 - 02.00
+    job: Bar
+
+- name: Abbau
+  dates: 
+  - date: 2023-05-29
+    time: ab Mittag
+    job: Abbau
+  - date: 2023-05-30
+    time: 08.00 - 12.00
+    job: Abbau
+  - date: 2023-05-30
+    time: 13.00 - 17.00
+    job: Abbau
+  - date: 2023-05-31
+    time: 08.00 - 12.00
+    job: Abbau (Falls noch nicht fertig)
+  - date: 2023-05-31
+    time: 13.00 - 17.00
+    job: Abbau (Falls noch nicht fertig)
+
