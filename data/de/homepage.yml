@@ -170,19 +170,13 @@ helfende:
     time: 18.00 - 19.00
     job: Spielmobil
   - date: 2023-05-28
-    time: 07.30 - 10.30
-    job: Essen schöpfen 
-  - date: 2023-05-28
-    time: 11.30 - 14.30
+    time: 07.30 - 14.30
     job: Essen schöpfen
   - date: 2023-05-28
     time: 17.30 - 20.30
     job: Essen schöpfen
   - date: 2023-05-29
-    time: 07.30 - 10.30
-    job: Essen schöpfen
-  - date: 2023-05-29
-    time: 11.30 - 14.30
+    time: 07.30 - 14.30
     job: Essen schöpfen
   - date: 2023-05-27
     time: 20.00 - 23.00
