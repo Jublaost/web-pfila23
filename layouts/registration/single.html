@@ -40,7 +40,7 @@
                 </div>
                 {{ if eq .Params.form "helfende" }}
                 <div class="form-group mb-30">
-                    <label for="schar">Schar: <strong style="color: darkred;">*</strong></label>
+                    <label for="schar">Schar / ehemalige Schar: <strong style="color: darkred;">*</strong></label>
                     <input type="text" class="form-control" id="schar" name="schar" required>
                 </div>
                 {{ else }}
@@ -270,7 +270,8 @@
                 </div>
                 <p class="p-20"><small>* J&S Bus Fahrer müssen eine eigene Fremdlenkerversicherung haben!</small></p>
                 <div class="form-group mb-30">
-                    <label for="helpcount">So oft möchte ich helfen: <strong style="color: darkred;">*</strong></label>
+                    <label for="helpcount">An so vielen schichten könnt ihr mich während dem pfila einteilen: <strong
+                            style="color: darkred;">*</strong></label>
                     <input type="text" id="helpcount" name="helpcount" class="form-control" required>
                 </div>
                 {{ end }}

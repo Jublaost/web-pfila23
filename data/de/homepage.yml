@@ -149,25 +149,13 @@ helfende:
 - name: Am Pfila
   dates: 
   - date: 2023-05-27
-    time: 11.30 - 13.00
-    job: Spielmobil
-  - date: 2023-05-27
-    time: 14.30 - 15.30
-    job: Spielmobil
-  - date: 2023-05-27
-    time: 18.00 - 19.00
+    time: 11.30 - 19.00
     job: Spielmobil
   - date: 2023-05-27
     time: 17.30 - 20.30
     job: Essen schöpfen
   - date: 2023-05-28
-    time: 14.00 - 14.30
-    job: Spielmobil
-  - date: 2023-05-28
-    time: 15.30 - 16.00
-    job: Spielmobil
-  - date: 2023-05-28
-    time: 18.00 - 19.00
+    time: 14.00 - 19.00
     job: Spielmobil
   - date: 2023-05-28
     time: 07.30 - 14.30
