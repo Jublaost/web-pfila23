@@ -257,7 +257,7 @@
                         {{ range $index, $element := .dates }}
                         <div class="form-check">
                             <input class="form-check-input" type="checkbox"
-                                value="{{ $element.date }} {{ $element.time }}" name="pfila-dates"
+                                value="{{ $element.date }} {{ $element.time }} {{ .job }}" name="pfila-dates"
                                 id="pfila-dates-{{ $index1 }}-{{$index}}">
                             <label class="form-check-label" for="pfila-dates-{{ $index1 }}-{{$index}}">
                                 {{ dateFormat "Monday 2. Jan" $element.date }} {{ $element.time }}</label>

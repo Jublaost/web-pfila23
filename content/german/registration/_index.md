@@ -1,5 +1,5 @@
 ---
 title: Anmeldung
-description: Die Anmeldung fürs Pfila ist vorbei.
+description: Melde dich jetzt als Helfer*in an.
 
 ---
