@@ -90,20 +90,23 @@ document.getElementById("set").addEventListener('click', () => {
     registrationform.getElementsByTagName("button")[0].disabled = false;
 })
 
-document.getElementById("impfausweis").addEventListener('change', (e) => {
-    const file = e.target.files[0];
-    if (file.size > 4000000) {
-        document.getElementById("too-big-message").classList.remove("hide");
-        document.getElementById("impfausweis").value = '';
-    } else {
-        document.getElementById("too-big-message").classList.add("hide");
-        const reader = new FileReader();
-        reader.onloadend = () => {
-            document.getElementById("impfausweis-selected").src = reader.result;
+if (document.getElementById("impfausweis")) {
+    document.getElementById("impfausweis").addEventListener('change', (e) => {
+        const file = e.target.files[0];
+        if (file.size > 4000000) {
+            document.getElementById("too-big-message").classList.remove("hide");
+            document.getElementById("impfausweis").value = '';
+        } else {
+            document.getElementById("too-big-message").classList.add("hide");
+            const reader = new FileReader();
+            reader.onloadend = () => {
+                document.getElementById("impfausweis-selected").src = reader.result;
+            }
+            reader.readAsDataURL(file)
         }
-        reader.readAsDataURL(file)
-    }
-})
+    })
+}
+
 
 if (registrationform) {
     registrationform.onsubmit = (event) => {
