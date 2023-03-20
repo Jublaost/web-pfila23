@@ -153,8 +153,10 @@ if (registrationform) {
             payload[field.name] = field.value;
         });
 
-        let impfausweis = document.getElementById("impfausweis-selected").src;
-        payload.impfausweis = impfausweis;
+        if (document.getElementById("impfausweis-selected")) {
+            let impfausweis = document.getElementById("impfausweis-selected").src;
+            payload.impfausweis = impfausweis;
+        }
 
         grecaptcha.ready(() => {
             grecaptcha.execute('6LeQ0EsiAAAAAPOYVCLnkcsc6HE46vtuRfa1jgf6', { action: 'submit' }).then((token) => {
