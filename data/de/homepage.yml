@@ -2,15 +2,18 @@
 sponsor_logo_slider:
   enable : true
   logos:
+  - name: Kirchgemeinde St. Gallen
+    url: https://kathsg.ch
+    image: sponsors/kathsg.png
   - name: Methrom Stiftung
     url: https://metrohm-stiftung.ch/
     image: sponsors/Metrohm_Metrohm_Stiftung_neg_bw.png
   - name: Stiftung Fred Styger
     url: 
-    image: 
+    image: sponsors/drfredstyger.jpeg
   - name: Stiftung Steinegg Herisau
     url: 
-    image: 
+    image: sponsors/steinegg_stiftung_herisau.png
   - name: Kath. Kirchgemeinde Gäbris (Seelsorgeeinheit)
     url: https://www.seelsorgeeinheitgaebris.ch/
     image: sponsors/seelsorgeeinheit-gaebris.png
@@ -53,12 +56,6 @@ sponsor_logo_slider:
   - name: Märchenhotel Braunwald
     url: https://www.maerchenhotel.ch/
     image: sponsors/maerchenhotel.png
-  - name: Privatspende Martin & Barbara Grob
-    url: 
-    image: 
-  - name: Privatspende Johannes Martin Grob
-    url: 
-    image: 
 
 ########################## Helfende Schichten #########################
 helfende:
