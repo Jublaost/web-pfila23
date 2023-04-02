@@ -25,13 +25,20 @@
                 {{ range .logos }}
                 <li>{{ .name }}
                     {{ if .url }}
-                    {{ if .image }}
                     <a href="{{ .url }}" target="_blank">
+                        {{ if .image }}
                         <p>
                             <img style="max-width: 10rem;" class="p-10" src="{{ .image | absURL }}" alt="">
                         </p>
                         <br>
+                        {{ end }}
                     </a>
+                    {{ else }}
+                    {{ if .image }}
+                    <p>
+                        <img style="max-width: 10rem;" class="p-10" src="{{ .image | absURL }}" alt="">
+                    </p>
+                    <br>
                     {{ end }}
                     {{ end }}
                 </li>
