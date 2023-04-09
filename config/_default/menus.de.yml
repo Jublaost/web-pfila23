@@ -5,7 +5,7 @@ main:
   - name: Team
     URL: team
     weight: 2
-  - name: Anmeldung
+  - name: Helfende
     URL: registration
     weight: 3
   - name: Tom dä Bom
