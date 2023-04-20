@@ -20,9 +20,15 @@ sponsor_logo_slider:
   - name: Stiftung Albin Pedrotti St. Gallen
     url: 
     image: 
-  - name: Loller Getränkehandel Abtwil
+  - name: Koller Getränkehandel Abtwil
     url: https://www.koller-getraenke.ch/
     image: sponsors/Koller_Getraenke.webp
+  - name: Stagelight
+    url: https://stagelight.ch/
+    image: sponsors/stagelight.png
+  - name: Kompotoi
+    url: https://www.kompotoi.ch/
+    image: sponsors/kompotoi.jpeg
   - name: sgsw St. Galler Stadtwerke
     url: https://www.sgsw.ch/
     image: sponsors/sgsw.jpeg
