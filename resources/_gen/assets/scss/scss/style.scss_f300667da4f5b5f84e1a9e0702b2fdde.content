@@ -3024,3 +3024,7 @@ canvas#signature-pad {
 .faq img {
   width: 100%;
   height: auto; }
+
+.spenden .col-6 {
+  padding-left: 0;
+  padding-right: 0; }

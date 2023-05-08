@@ -1,11 +1,21 @@
 {{ define "main" }}
 {{ $data := index .Site.Data .Site.Language.Lang }}
 
-<section>
-    <div class="container text-center">
-        <br>
-        <h2>{{ .Description }}</h2>
-        <p class="p-30">{{ .Content | markdownify }}</p>
+<section class="spenden">
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+                {{ $image := resources.GetMatch .Params.img_left }}
+                {{ partial "image.html" (dict "Image" $image "Alt" "Insta 1" "Class" "img-fluid") }}
+            </div>
+            <div class="col-6">
+                {{ $image := resources.GetMatch .Params.img_right }}
+                {{ partial "image.html" (dict "Image" $image "Alt" "Insta 2" "Class" "img-fluid") }}
+            </div>
+        </div>
+
+        <h2 class="p-30">{{ .Description }}</h2>
+        <p class="p-10">{{ .Content | markdownify }}</p>
 
         {{ $image := resources.GetMatch .Params.qr }}
         {{ partial "image.html" (dict "Image" $image "Alt" "Konto QR" "Class" "img-fluid") }}
