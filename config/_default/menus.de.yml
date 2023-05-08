@@ -30,7 +30,11 @@ main:
     parent: Infos
     URL: jugendurlaub
     weight: 4
-  - name: Spenden
+  - name: Ehemaligen Kafi
+    parent: Infos
+    URL: ehemalige
+    weight: 5
+  - name: Spenden & Sponsoren
     URL: spenden
     weight: 6
 

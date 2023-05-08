@@ -15,11 +15,7 @@
         </div>
 
         <h2 class="p-30">{{ .Description }}</h2>
-        <p class="p-10">{{ .Content | markdownify }}</p>
-
-        {{ $image := resources.GetMatch .Params.qr }}
-        {{ partial "image.html" (dict "Image" $image "Alt" "Konto QR" "Class" "img-fluid") }}
-
+        <div class="p-10">{{ .Content | markdownify }}</div>
     </div>
 </section>
 
