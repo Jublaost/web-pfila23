@@ -45,8 +45,14 @@ Es wird an die Leitenden digital versendet.
 ## E
 ### Ehemaligenkafi
 Findet am Samstag von 15.00 - 17.00 Uhr statt. Es gibt auf dem Lagerplatz einen Kaffeebetrieb für alle, die einmal bei Jungwacht Blauring dabei waren. 
-Elektronische Geräte: iPod, Handy und weitere elektronische Unterhaltungsmittel sind im Lager bei den Teilnehmenden unerwünscht und bleiben zu Hause. Für die sicherheitsverantwortliche Person gibt es die Möglichkeit das Handy regelmässig aufzuladen. Für alle anderen gibt es keine Lademöglichkeiten.
-Elementengruppen: Alle Scharen werden einem der vier Elemente zugeteilt. So entstehen die Elementengruppen. Welche Schar zu welchem Element gehört erfahren die Teilnehmenden mit den letzten Infos oder kann nachgelesen werden unter S – Scharen.
+
+<a href="https://pfila23.blob.core.windows.net/downloads/Flyer_Einladung_Ehemaligenkafi.pdf" target="_blank"><button class="btn btn-primary">Einladung Ehemaligen Kafi</button></a>
+
+### Elektronische Geräte
+iPod, Handy und weitere elektronische Unterhaltungsmittel sind im Lager bei den Teilnehmenden unerwünscht und bleiben zu Hause. Für die sicherheitsverantwortliche Person gibt es die Möglichkeit das Handy regelmässig aufzuladen. Für alle anderen gibt es keine Lademöglichkeiten.
+
+### Elementengruppen
+Alle Scharen werden einem der vier Elemente zugeteilt. So entstehen die Elementengruppen. Welche Schar zu welchem Element gehört erfahren die Teilnehmenden mit den letzten Infos oder kann nachgelesen werden unter S – Scharen.
 
 ## F
 ### Festwirtschaft
@@ -82,6 +88,8 @@ Alle Teilnehmenden erhalten ein Käppli in ihrer Elementenfarbe. Diese sollen an
 ## L
 ### Lagerplatzeinteilung
 ![image](/images/Lagerplatzeinteilung.jpg)
+
+<a href="/lagerplatz" target="_blank"><button class="btn btn-primary">Lagerplatz</button></a>
 
 ### Lunch
 Für den Samstagmittag benötigst du einen von zu Hause mitgebrachten Lunch, zum Beispiel ein Sandwich. Für alle weiteren Mahlzeiten und Zwischenverpflegungen werden wir von der Lagerküche verwöhnt.
@@ -146,9 +154,13 @@ CH54 8080 8004 2425 0869 6
 
 ### Sponsoren
 Wir danken ganz herzlich unseren Sponsoren. Wer das alles ist, siehe auf der Webseite. 
+<a href="/spenden" target="_blank"><button class="btn btn-primary">Spenden & Sponsoren</button></a>
 
 ### Sponsoren-Anlass
 Findet am Samstag, 27.05.2023 vom 13.30-15.00 Uhr statt. Wir freuen uns darauf, euch das Lagerleben zu zeigen.
+
+<a href="https://pfila23.blob.core.windows.net/downloads/Flyer_Einladung_Sponsoren.pdf" target="_blank"><button class="btn btn-primary">Einladung Sponsoren</button></a>
+
 
 ### Sanität
 Ein Team vom Samariterverein steht uns tatkräftig zur Seite. So werden wir professionell unterstützt. 
