@@ -14,6 +14,9 @@ sponsor_logo_slider:
   - name: Stiftung Steinegg Herisau
     url: 
     image: sponsors/steinegg_stiftung_herisau.png
+  - name: Katholischen Konfessionsteil des Kantons St.Gallen
+    url: https://sg.kath.ch
+    image: sponsors/sgkathch.png
   - name: Kath. Kirchgemeinde Gäbris (Seelsorgeeinheit)
     url: https://www.seelsorgeeinheitgaebris.ch/
     image: sponsors/seelsorgeeinheit-gaebris.png
@@ -26,6 +29,12 @@ sponsor_logo_slider:
   - name: Stagelight
     url: https://stagelight.ch/
     image: sponsors/stagelight.png
+  - name: Näf Service und Maschinen AG
+    url: https://www.naef-ag.ch
+    image: sponsors/naef.jpeg
+  - name: BauRent AG Ost
+    url: https://www.baurent-ost.com/
+    image: sponsors/baurent.jpeg
   - name: Kompotoi
     url: https://www.kompotoi.ch/
     image: sponsors/kompotoi.jpeg
@@ -61,7 +70,7 @@ sponsor_logo_slider:
     image: sponsors/raiffaisen.png
   - name: Kath. Kirchgemeinde Region Rorschach
     url: https://www.kkrr.ch/index.html
-    image: sponsors/kath_ror.png
+    image: sponsors/kathrorschach.png
   - name: Märchenhotel Braunwald
     url: https://www.maerchenhotel.ch/
     image: sponsors/maerchenhotel.png
