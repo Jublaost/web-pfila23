@@ -1,0 +1,32 @@
+{{ define "main" }}
+
+<section class="section-padding lagerplatz">
+    <h2 class="p-30">{{ .Description }}</h2>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                {{ $image := resources.GetMatch .Params.img_top }}
+                {{ partial "image.html" (dict "Image" $image "Alt" "Insta Baum" "Class" "img-fluid") }}
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-md-6">
+                {{ $image := resources.GetMatch .Params.img_left }}
+                {{ partial "image.html" (dict "Image" $image "Alt" "Plan Zeichnung" "Class" "img-fluid") }}
+            </div>
+            <br>
+            <div class="col-md-6">
+                {{ $image := resources.GetMatch .Params.img_right }}
+                {{ partial "image.html" (dict "Image" $image "Alt" "Plan" "Class" "img-fluid") }}
+            </div>
+        </div>
+        <div class="row no-gutters">
+            <div class="col-lg-10 mt-40">
+                {{ .Content }}
+            </div>
+        </div>
+    </div>
+</section>
+
+{{ end }}

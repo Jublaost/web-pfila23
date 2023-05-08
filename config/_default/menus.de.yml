@@ -18,14 +18,18 @@ main:
     parent: Infos
     URL: faq
     weight: 1
+  - name: Lagerplatz
+    parent: Infos
+    URL: lagerplatz
+    weight: 2
   - name: Packliste
     parent: Infos
     URL: packliste
-    weight: 2
+    weight: 3
   - name: Jugendurlaub
     parent: Infos
     URL: jugendurlaub
-    weight: 3
+    weight: 4
   - name: Spenden
     URL: spenden
     weight: 6
