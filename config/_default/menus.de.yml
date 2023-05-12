@@ -8,9 +8,17 @@ main:
   - name: Helfende
     URL: registration
     weight: 3
+  - name: PFILA
+    hasChildren: true
+    weight: 4
   - name: Tom dä Bom
     URL: tomdaebom
-    weight: 4
+    parent: PFILA
+    weight: 1
+  - name: Lagersong
+    URL: lagersong
+    parent: PFILA
+    weight: 2
   - name: Infos
     hasChildren: true
     weight: 5
