@@ -87,7 +87,7 @@ Alle Teilnehmenden erhalten ein Käppli in ihrer Elementenfarbe. Diese sollen an
 
 ## L
 ### Lagerplatzeinteilung
-![image](/images/Lagerplatzeinteilung.jpg)
+![image](/images/Zeltplatz_Zeichnung.jpeg)
 
 <a href="/lagerplatz" target="_blank"><button class="btn btn-primary">Lagerplatz</button></a>
 
