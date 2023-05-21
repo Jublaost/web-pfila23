@@ -45,6 +45,9 @@ main:
   - name: Spenden & Sponsoren
     URL: spenden
     weight: 6
+  - name: Kontakt
+    URL: kontakt
+    weight: 7
 
 footer:
   - name: 

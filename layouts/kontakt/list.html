@@ -1,0 +1,72 @@
+{{ define "main" }}
+
+<section>
+    <div class="container">
+        <h2 class="p-30">Kontaktformular</h2>
+        <div class="row justify-content-center">
+            <form class="col-md-8" id="contactform">
+                <div class="form-group mb-30">
+                    <label class="text-black-200 h5 font-weight-600 mb-2" for="name">Name<strong
+                            style="color: darkred;">*</strong></label>
+                    <input class="form-control shadow-none" type="text" placeholder="Chuck Norris" id="name" name="name"
+                        required>
+                </div>
+                <div class="form-group mb-30">
+                    <label class="text-black-200 h5 font-weight-600 mb-2" for="email">Email<strong
+                            style="color: darkred;">*</strong></label>
+                    <input class="form-control shadow-none" type="email" placeholder="chuck@norris.com" id="email"
+                        name="email" required>
+                </div>
+                <div class="form-group mb-30">
+                    <label class="text-black-200 h5 font-weight-600 mb-2" for="message">Nachricht<strong
+                            style="color: darkred;">*</strong></label>
+                    <textarea class="form-control shadow-none" rows="5" id="message" name="message" required></textarea>
+                </div>
+                <br />
+                <div class="float-right">
+                    <button class="btn btn-primary" type="submit">Senden</button>
+                </div>
+            </form>
+            <div id="success-message-2" style="display: none">
+                <h3>Vielen Dank!</h3>
+                <p>Wir werden uns umgehend bei dir melden.</p>
+            </div>
+            <div id="error-message-2" style="display: none">
+                <h3 style="color: darkred;">Fehler!</h3>
+                <p style="color: darkred;">Leider hat etwas nicht geklappt... melde dich doch direkt bei <a
+                        href="mailto:thomas.vonmentlen@jublaost.ch">thomas.vonmentlen@jublaost.ch</a></p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section-padding">
+    <h2 class="p-30">{{ .Description }}</h2>
+    <div class="container">
+        <div class="row no-gutters">
+            <div class="col-lg-10 mt-40">
+                {{ .Content }}
+            </div>
+        </div>
+        <div class="row">
+            {{ range .Params.kontakte }}
+            <div class="col">
+                <p><strong>{{ .name }}</strong></p>
+                <p>{{ .function }}</p>
+                <a href="mailto:{{.email}}">
+                    <p>{{ .email }}</p>
+                </a>
+                <a href="tel:{{.phone}}">
+                    <p>{{ .phone }}</p>
+                </a>
+                <br>
+            </div>
+            {{ end }}
+        </div>
+    </div>
+</section>
+
+{{ $script := resources.Get "js/kontakt.js" | minify}}
+<script src="{{ $script.Permalink }}"></script>
+
+{{ end }}
