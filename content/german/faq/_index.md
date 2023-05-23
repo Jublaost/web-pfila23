@@ -64,7 +64,8 @@ Wir haben einen Fotografen auf dem Platz. Die Fotos werden den Scharen zur Verf�
 ## G
 ### Geschirr
 Dein Essgeschirr darfst du zuhause lassen. Wir organisieren das f체r dich.
-Geld w채hrend des Pfilas: Die Teilnehmenden brauchen kein Geld. Die Leitenden nur f체r die Festwirtschaft nach dem Programm. Hier sind wir froh, wenn eine Bankkarte vorhanden ist, dass mit Karte bezahlt wird. 
+### Geld
+w채hrend des Pfilas: Die Teilnehmenden brauchen kein Geld. Die Leitenden nur f체r die Festwirtschaft nach dem Programm. Hier sind wir froh, wenn eine Bankkarte vorhanden ist, dass mit Karte bezahlt wird. 
 
 ## H
 ### Helfende

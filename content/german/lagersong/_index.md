@@ -48,3 +48,6 @@ De grösste Spass hemmer nur mit dir <br />
 ©Iahu<br />
 <br />
 <a src="https://pfila23.blob.core.windows.net/downloads/Tom_dae_Bom_Lyrics-Chords.pdf" target="_blank"><button class="btn btn-primary">Download PDF (inkl. Akkorde)</button></a>
+<br />
+Download Liederbüchlein:
+<a src="https://pfila23.blob.core.windows.net/downloads/Liedersammlung Lagerfeuer.pdf" target="_blank"><button class="btn btn-primary">Download</button></a>

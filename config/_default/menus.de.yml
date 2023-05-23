@@ -34,9 +34,9 @@ main:
     parent: Infos
     URL: packliste
     weight: 3
-  - name: Jugendurlaub
+  - name: Leitendeninfos
     parent: Infos
-    URL: jugendurlaub
+    URL: info-leitende
     weight: 4
   - name: Ehemaligen Kafi
     parent: Infos
