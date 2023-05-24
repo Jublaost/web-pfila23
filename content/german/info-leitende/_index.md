@@ -6,7 +6,7 @@ description: Download das Infobüchlein für Leitende
 Lade dir das Infobüchlein für Leitende herunter und erfahre alles, was du fürs Pfila23 wissen musst.
 
 <br />
-<a src="https://pfila23.blob.core.windows.net/downloads/Pfila_Infobuechli_A5_WEB.pdf" target="_blank"><button class="btn btn-primary">Download A5</button></a>
+<a href="https://pfila23.blob.core.windows.net/downloads/Pfila_Infobuechli_A5_WEB.pdf" target="_blank"><button class="btn btn-primary">Download A5</button></a>
 <br />
 <br />
-<a src="https://pfila23.blob.core.windows.net/downloads/Pfila_Infobuechli_A5_Druck.pdf" target="_blank"><button class="btn btn-primary">Download A5 (Druckversion)</button></a>
+<a href="https://pfila23.blob.core.windows.net/downloads/Pfila_Infobuechli_A5_Druck.pdf" target="_blank"><button class="btn btn-primary">Download A5 (Druckversion)</button></a>

@@ -7,6 +7,9 @@ description: Unser Lagersong fürs Pfila23!!
     <source src="https://pfila23.blob.core.windows.net/downloads/Tom-dae-Bom.m4a" type="audio/mp4" />
 </audio>
 
+<br />
+<br />
+
 **Intro:** <br />
 *music* <br />
  <br />
@@ -47,7 +50,10 @@ De grösste Spass hemmer nur mit dir <br />
 <br />
 ©Iahu<br />
 <br />
-<a src="https://pfila23.blob.core.windows.net/downloads/Tom_dae_Bom_Lyrics-Chords.pdf" target="_blank"><button class="btn btn-primary">Download PDF (inkl. Akkorde)</button></a>
+<a href="https://pfila23.blob.core.windows.net/downloads/Tom_dae_Bom_Lyrics-Chords.pdf" target="_blank"><button class="btn btn-primary">Download PDF (inkl. Akkorde)</button></a>
+<br />
 <br />
 Download Liederbüchlein:
-<a src="https://pfila23.blob.core.windows.net/downloads/Liedersammlung Lagerfeuer.pdf" target="_blank"><button class="btn btn-primary">Download</button></a>
+<br />
+<br />
+<a href="https://pfila23.blob.core.windows.net/downloads/Liedersammlung Lagerfeuer.pdf" target="_blank"><button class="btn btn-primary">Download</button></a>
