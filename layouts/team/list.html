@@ -15,9 +15,21 @@
                         (dict "Image" $image "Alt" "{{.name}} image" "Class" "img-fluid rounded-circle") }}
 
                         <div class="team-shapes">
-                            <div class="shape-1 shape-xs bg-secondary rounded-circle"></div>
-                            <div class="shape-2 shape-sm bg-primary rounded-circle"></div>
-                            <div class="shape-3 shape-sm-2 bg-tertiary rounded-circle"></div>
+                            <div class="shape-1 shape-xs bg-secondary rounded-circle">
+                                {{ if .Params.special }}
+                                <img src="https://pfila23.blob.core.windows.net/images/infra-logo.jpeg" alt="" class="img-fluid" style="border-radius: 50%;">
+                                {{ end }}
+                            </div>
+                            <div class="shape-2 shape-sm bg-primary rounded-circle">
+                                {{ if .Params.special }}
+                                <img src="https://pfila23.blob.core.windows.net/images/infra-logo.jpeg" alt="" class="img-fluid" style="border-radius: 50%;">
+                                {{ end }}
+                            </div>
+                            <div class="shape-3 shape-sm-2 bg-tertiary rounded-circle">
+                                {{ if .Params.special }}
+                                <img src="https://pfila23.blob.core.windows.net/images/infra-logo.jpeg" alt="" class="img-fluid" style="border-radius: 50%;">
+                                {{ end }}
+                            </div>
                         </div>
                     </div>
                     <p class="font-weight-bold mb-10">{{.Params.subtitle}}</p>
