@@ -19,6 +19,17 @@ main:
     URL: lagersong
     parent: PFILA
     weight: 2
+  - name: Medienberichte
+    URL: medien
+    parent: PFILA
+    weight: 3
+  - name: Tagebuch
+    hasChildren: true
+    weight: 4
+  - name: Tag 1
+    URL: tagebuch/tag1
+    parent: Tagebuch
+    weight: 1
   - name: Infos
     hasChildren: true
     weight: 5

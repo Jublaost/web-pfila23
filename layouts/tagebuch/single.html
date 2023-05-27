@@ -1,0 +1,20 @@
+{{ define "main" }}
+{{ $data := index .Site.Data .Site.Language.Lang }}
+
+<section>
+    <div class="container">
+        <p>{{ .Content }}</p>
+        <br>
+        <div class="row justify-content-center">
+        {{ range .Params.images }}
+        <div class="col-sm-6">
+            <img src="{{ . }}" class="img-fluid p-20" alt="Responsive image">
+        </div>
+        {{ end }}
+    </div>
+
+    </div>
+</section>
+
+
+{{ end }}
