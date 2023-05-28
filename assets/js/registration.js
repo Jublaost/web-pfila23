@@ -55,6 +55,10 @@ if (noimpf) {
 }
 
 var canvas = document.getElementById("signature-pad");
+if (canvas) {
+    window.onresize = resizeCanvas;
+    resizeCanvas();
+}
 
 function resizeCanvas() {
     var ratio = Math.max(window.devicePixelRatio || 1, 1);
@@ -62,8 +66,6 @@ function resizeCanvas() {
     canvas.height = canvas.offsetHeight * ratio;
     canvas.getContext("2d").scale(ratio, ratio);
 }
-window.onresize = resizeCanvas;
-resizeCanvas();
 
 var signaturePad = new SignaturePad(canvas, {
     backgroundColor: 'rgb(250,250,250)'
