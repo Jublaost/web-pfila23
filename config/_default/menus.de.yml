@@ -30,6 +30,10 @@ main:
     URL: tagebuch/tag1
     parent: Tagebuch
     weight: 1
+  - name: Tag 2
+    URL: tagebuch/tag2
+    parent: Tagebuch
+    weight: 2
   - name: Infos
     hasChildren: true
     weight: 5
