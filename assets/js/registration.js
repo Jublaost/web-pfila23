@@ -9,14 +9,16 @@ const backendUrl = "https://pfila23.azurewebsites.net";
 })();
 
 async function getScharen() {
-    let response = await fetch(backendUrl + "/api/GetScharen");
-    let data = await response.json();
     let container = document.getElementById("schar");
-    for (let i of data) {
-        let element = document.createElement("option");
-        element.innerHTML = `${i.schar}`;
-        element.value = `${i.schar}`;
-        container.appendChild(element);
+    if (container) {
+        let response = await fetch(backendUrl + "/api/GetScharen");
+        let data = await response.json();
+        for (let i of data) {
+            let element = document.createElement("option");
+            element.innerHTML = `${i.schar}`;
+            element.value = `${i.schar}`;
+            container.appendChild(element);
+        }
     }
 }
 
@@ -67,9 +69,11 @@ function resizeCanvas() {
     canvas.getContext("2d").scale(ratio, ratio);
 }
 
-var signaturePad = new SignaturePad(canvas, {
-    backgroundColor: 'rgb(250,250,250)'
-});
+if (canvas) {
+    var signaturePad = new SignaturePad(canvas, {
+        backgroundColor: 'rgb(250,250,250)'
+    });
+}
 
 if (document.getElementById("signature")) {
     document.getElementById("signature").src = '';
