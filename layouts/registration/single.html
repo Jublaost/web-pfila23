@@ -329,7 +329,11 @@
                 <p id="disabledWarning"><small>Stelle sicher, dass die Unterschrift vorhanden ist (grün
                         umrandet)</small></p>
                 {{ end }}
+                {{ if ne .Params.form "helfendefest" }}
                 <button class="btn btn-primary" disabled>Anmelden</button>
+                {{ else }}
+                <button class="btn btn-primary">Anmelden</button>
+                {{ end }}
             </form>
             <div id="success-message" style="display: none">
                 <h3>Vielen Dank!</h3>
