@@ -135,8 +135,10 @@ if (registrationform) {
             }
         })
 
-        let signature = document.getElementById("signature").src;
-        payload.signature = signature;
+        if (document.getElementById("signature")) {
+            let signature = document.getElementById("signature").src;
+            payload.signature = signature;
+        }
 
         let formId = registrationform.id;
         console.log("FORMID: ", formId)
