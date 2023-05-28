@@ -19,6 +19,7 @@
                     <label for="nachname">Nachname: <strong style="color: darkred;">*</strong></label>
                     <input type="text" class="form-control" id="nachname" name="nachname" required>
                 </div>
+                {{ if ne .Params.form "helfendefest" }}
                 <div class="form-group mb-30">
                     <label>Geschlecht: <strong style="color: darkred;">*</strong></label>
                     <div class="form-check">
@@ -34,10 +35,12 @@
                         <label class="form-check-label" for="gender-d">Divers</label>
                     </div>
                 </div>
+                {{ end }}
                 <div class="form-group mb-30">
                     <label for="geburtstag">Geburtstag: <strong style="color: darkred;">*</strong></label>
                     <input type="date" class="form-control" id="geburtstag" name="geburtstag" required>
                 </div>
+                {{ if ne .Params.form "helfendefest" }}
                 {{ if eq .Params.form "helfende" }}
                 <div class="form-group mb-30">
                     <label for="schar">Schar / ehemalige Schar: <strong style="color: darkred;">*</strong></label>
@@ -325,6 +328,7 @@
                 </div>
                 <p id="disabledWarning"><small>Stelle sicher, dass die Unterschrift vorhanden ist (grün
                         umrandet)</small></p>
+                {{ end }}
                 <button class="btn btn-primary" disabled>Anmelden</button>
             </form>
             <div id="success-message" style="display: none">

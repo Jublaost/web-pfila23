@@ -143,6 +143,8 @@ if (registrationform) {
         } else if (formId == "helfende-form") {
             api = "/api/RegisterHelfende?code=SmBbXRnyes_eQd1PuiAHHAOX3lmSPBUEFEI-qnyh5EniAzFutuWzEQ=="
             //api = "/api/RegisterHelfende"
+        } else if (formId == "helfendefest-form") {
+            api = "/api/RegisterHelfendefest?code=6Zrkm_3VmFLIxQPkMl_Q-Rns5eN-SWT3_m5yGnk0_5_cAzFua2bYtQ=="
         } else {
             errorMessage.style.display = "block";
             return
