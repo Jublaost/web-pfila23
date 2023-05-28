@@ -78,23 +78,26 @@ if (canvas) {
 if (document.getElementById("signature")) {
     document.getElementById("signature").src = '';
 }
-document.getElementById("clear").addEventListener('click', function () {
-    canvas.classList.remove("hide");
-    document.getElementById("set").classList.remove("hide");
-    document.getElementById("signature").src = ''
-    document.getElementById("signature").classList.add("hide");
-    signaturePad.clear();
-    registrationform.getElementsByTagName("button")[0].disabled = true;
-})
-
-document.getElementById("set").addEventListener('click', () => {
-    canvas.classList.add("hide");
-    document.getElementById("set").classList.add("hide");
-    document.getElementById("signature").classList.remove("hide");
-    var imagedata = canvas.toDataURL("image/png");
-    document.getElementById("signature").src = imagedata
-    registrationform.getElementsByTagName("button")[0].disabled = false;
-})
+if (document.getElementById("clear")) {
+    document.getElementById("clear").addEventListener('click', function () {
+        canvas.classList.remove("hide");
+        document.getElementById("set").classList.remove("hide");
+        document.getElementById("signature").src = ''
+        document.getElementById("signature").classList.add("hide");
+        signaturePad.clear();
+        registrationform.getElementsByTagName("button")[0].disabled = true;
+    })
+}
+if (document.getElementById("set")) {
+    document.getElementById("set").addEventListener('click', () => {
+        canvas.classList.add("hide");
+        document.getElementById("set").classList.add("hide");
+        document.getElementById("signature").classList.remove("hide");
+        var imagedata = canvas.toDataURL("image/png");
+        document.getElementById("signature").src = imagedata
+        registrationform.getElementsByTagName("button")[0].disabled = false;
+    })
+}
 
 if (document.getElementById("impfausweis")) {
     document.getElementById("impfausweis").addEventListener('change', (e) => {
