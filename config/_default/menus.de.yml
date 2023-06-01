@@ -64,9 +64,13 @@ main:
   - name: Spenden & Sponsoren
     URL: spenden
     weight: 6
+  - name: Bilder
+    URL: https://flic.kr/ps/42jpk6
+    weight: 7
   - name: Kontakt
     URL: kontakt
-    weight: 7
+    weight: 8
+
 
 footer:
   - name: 
